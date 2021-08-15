@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bowmanmike.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Mike Bowman Personal Site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mike Bowman <mike.bowman@hey.com>",
   "dependencies": {
     "dotenv": "^8.6.0",
     "gatsby": "^3.11.1",
@@ -22,10 +22,28 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-plugin-postcss": "^4.11.0",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",
     "tailwindcss": "^2.2.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
   },
   "keywords": [
     "gatsby"
@@ -42,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/bowmanmike/bowmanmike.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/bowmanmike/bowmanmike.com/issues"
   }
 }
