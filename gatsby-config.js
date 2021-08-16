@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'Mike Bowman',
     description: 'Mike Bowman',
-    author: '@mbowman2',
-    siteUrl: 'https://bowmanmike.netlify.app',
+    author: '@mikebowman_dev',
+    siteUrl: 'https://mikebowman.dev',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

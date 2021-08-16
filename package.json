@@ -1,5 +1,5 @@
 {
-  "name": "bowmanmike.com",
+  "name": "mikebowman.dev",
   "private": true,
   "description": "Mike Bowman Personal Site",
   "version": "0.1.0",
@@ -60,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bowmanmike/bowmanmike.com"
+    "url": "https://github.com/bowmanmike/mikebowman.dev"
   },
   "bugs": {
-    "url": "https://github.com/bowmanmike/bowmanmike.com/issues"
+    "url": "https://github.com/bowmanmike/mikebowman.dev/issues"
   }
 }
