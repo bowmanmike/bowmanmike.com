@@ -2,21 +2,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 const BlogPost = ({ data: { post } }) => (
-  <article key={post.id}>
+  <article>
     <h2>{post.frontmatter.title}</h2>
+    <small>{post.frontmatter.date}</small>
     <div dangerouslySetInnerHTML={{ __html: post.html }} />
   </article>
 );
 
 export const query = graphql`
-  query SinglePost($id: String!) {
-    post: markdownRemark(id: { eq: $id }) {
+  query SinglePost($slug: String!) {
+    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
-        title
-      }
-      id
-      fields {
         slug
+        title
+        date(formatString: "YYYY-MM-DD")
       }
       html
     }
