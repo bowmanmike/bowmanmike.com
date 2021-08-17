@@ -1,5 +1,5 @@
 ---
-published; true
+published: true
 slug: keep-on-truckin
 title: Keep on Truckin'
 date: 2016-04-23
