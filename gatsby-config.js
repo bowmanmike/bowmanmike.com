@@ -8,8 +8,8 @@ module.exports = {
     siteUrl: 'https://mikebowman.dev',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
