@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Link, graphql } from 'gatsby';
+import { graphql, Link } from "gatsby";
 
 const Blog = ({ data }) => {
   const { posts } = data.blog;

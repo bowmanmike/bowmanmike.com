@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
+import React from "react";
 
 const Nav = () => (
   <nav className="bg-blue-200">
