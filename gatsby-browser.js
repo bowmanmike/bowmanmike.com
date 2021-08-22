@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 import React from 'react';
 
-import Layout from './src/components/Layout.js';
+import Layout from './src/components/Layout.tsx';
 
 import './src/styles/global.css';
 
