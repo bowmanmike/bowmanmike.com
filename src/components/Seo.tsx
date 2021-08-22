@@ -80,10 +80,4 @@ function Seo({ description, lang, meta, title }: IProps) {
   );
 }
 
-Seo.defaultProps = {
-  description: ``,
-  lang: `en`,
-  meta: [],
-};
-
 export default Seo;
