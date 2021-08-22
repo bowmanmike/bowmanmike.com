@@ -1,7 +1,9 @@
 import { graphql } from "gatsby";
 import React from "react";
 
-const BlogPost = ({ data: { post } }) => (
+import Post from "../types/post";
+
+const BlogPost = ({ data: { post } }: { data: { post: Post } }) => (
   <article>
     <h2>{post.frontmatter.title}</h2>
     <small>{post.frontmatter.date}</small>

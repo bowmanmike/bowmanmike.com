@@ -1,12 +1,13 @@
+import { graphql, Link } from "gatsby";
 import React from "react";
 
-import { graphql, Link } from "gatsby";
+import Post from "../types/post";
 
-const Blog = ({ data }) => {
+const Blog = ({ data }: { data: { blog: { posts: Post[] } } }) => {
   const { posts } = data.blog;
   return (
     <div>
-      {posts.map(post => {
+      {posts.map((post) => {
         const { slug } = post.frontmatter;
         return (
           <div key={slug}>
