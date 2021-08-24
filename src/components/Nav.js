@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const NavItem = ({ path, text }) => (
-  <li className="inline-flex items-center rounded border border-gray-800 shadow-sm ml-0 mr-2 md:ml-2 md:mr-0">
+  <li className="inline-flex items-center rounded border border-gray-800 shadow-sm first:ml-0 ml-2">
     <Link
       to={path}
-      className="h-full w-full inline-block px-2 py-1 md:px-4 md:py-2 hover:bg-sky-100"
+      className="h-full w-full inline-block px-2 py-1 md:px-4 md:py-2 hover:bg-sky-100 active:bg-sky-100"
     >
       {text}
     </Link>
