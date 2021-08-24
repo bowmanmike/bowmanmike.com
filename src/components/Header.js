@@ -4,10 +4,14 @@ import { Link } from 'gatsby';
 import Nav from './Nav';
 
 const Header = () => (
-  <header className="flex items-center justify-between">
-    <Link to="/">
-      <h1 className="text-4xl font-bold leading-7">Mike Bowman</h1>
-    </Link>
+  <header className="md:flex md:items-center md:justify-between mb-2">
+    <div className="flex-1 min-w-0">
+      <Link to="/">
+        <h1 className="text-2xl font-bold leading-7 sm:text-3xl">
+          Mike Bowman
+        </h1>
+      </Link>
+    </div>
     <Nav />
   </header>
 );
