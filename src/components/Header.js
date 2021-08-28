@@ -11,6 +11,9 @@ const Header = () => (
           Mike Bowman
         </h1>
       </Link>
+      <h2 className="mt-3 md:mt-2">
+        Software Developer &mdash; Toronto, Canada
+      </h2>
     </div>
     <Nav />
   </header>
