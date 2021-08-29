@@ -4,17 +4,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/Seo';
 
 const AboutPage = () => (
-  <div className="bg-white overflow-hidden">
+  <div className="">
     <Seo title="About" />
     <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
       <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-            Case Study
-          </h2>
-          <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Meet Whitney
+          <h3 className="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Hi! I'm Mike!
           </h3>
         </div>
       </div>
@@ -55,12 +52,13 @@ const AboutPage = () => (
           </svg>
           <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
             <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-              <img
+              <StaticImage
+                src="../assets/images/mike-headshot.png"
+                alt="Mike wearing a baseball cap and a blue jacket standing by a lake"
+                width={3088}
+                height={2320}
+                placeholder="blurred"
                 className="rounded-lg shadow-lg object-cover object-center"
-                src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
-                alt="Whitney leaning against a railing on a downtown street"
-                width={1184}
-                height={1376}
               />
             </div>
           </div>
@@ -123,11 +121,3 @@ const AboutPage = () => (
 );
 
 export default AboutPage;
-// <StaticImage
-//   src="../assets/images/mike-headshot.png"
-//   alt="Mike wearing a baseball cap and a blue jacket standing by a lake"
-//   width={3088}
-//   height={2320}
-//   placeholder="blurred"
-//   className="rounded-lg shadow-lg object-cover object-center"
-// />
