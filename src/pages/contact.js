@@ -15,10 +15,10 @@ const ContactPage = () => (
               <dl className="mt-2 text-base text-gray-500">
                 <div>
                   <dt className="sr-only">Email</dt>
-                  {/* Temp, until I can figure out email forwarding */}
-                  {/* <dd><a href="mailto:hello@mikebowman.dev">hello@mikebowman.dev</a></dd> */}
                   <dd>
-                    <a href="mailto:mike.bowman@hey.com">mike.bowman@hey.com</a>
+                    <a href="mailto:hello@mikebowman.dev">
+                      hello@mikebowman.dev
+                    </a>
                   </dd>
                 </div>
               </dl>
