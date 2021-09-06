@@ -15,8 +15,7 @@ const AboutPage = () => (
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         <div className="relative lg:row-start-1 lg:col-start-2">
           <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
-            {/* <div className="aspect-w-10 aspect-h-7 lg:aspect-none"> */}
-            <div className="">
+            <div>
               <StaticImage
                 src="../assets/images/mike-headshot.png"
                 alt="Mike wearing a baseball cap and a blue jacket standing by a lake"
