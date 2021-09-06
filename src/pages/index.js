@@ -11,7 +11,8 @@ const IndexPage = () => (
       Right now, I work at <a href="https://pagerduty.com">PagerDuty</a>
     </p>
     <p>
-      Previously, I've worked at <a href="https://thescore.com">theScore</a> and{' '}
+      Previously, I've worked at {/* Should put in their logos here! */}
+      <a href="https://thescore.com">theScore</a> and{' '}
       <a href="https://zoocasa.com">Zoocasa.</a>
     </p>
   </>
