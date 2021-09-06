@@ -5,7 +5,8 @@ const NavItem = ({ path, text }) => (
   <li className="inline-flex items-center rounded border border-gray-800 shadow-sm first:ml-0 ml-2 hover:bg-sky-100">
     <Link
       to={path}
-      className="h-full w-full inline-block px-2 py-1 md:px-4 md:py-2"
+      className="h-full w-full inline-block px-2 py-1 md:px-4 md:py-2 rounded"
+      activeClassName="bg-sky-100"
     >
       {text}
     </Link>
