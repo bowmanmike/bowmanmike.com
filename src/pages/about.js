@@ -39,11 +39,11 @@ const AboutPage = () => (
           </div>
           <div className="mt-5 prose mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
             <p>
-              Software Development brings me a fulfilling career that keeps me
+              Software development brings me a fulfilling career that keeps me
               energized, engaged, and excited. I love the feeling of seeing a
               green test suite, especially after hours of wrangling with tricky
               code. I take enormous satisfaction in looking back at things I've
-              built.
+              built, and looking forward to what comes next.
             </p>
             <p>
               With an unconventional background, including a degree in Early
@@ -65,10 +65,8 @@ const AboutPage = () => (
               </li>
               <li>Building concurrent command-line tooling using Go</li>
             </ul>
-            {/*
-            <h3>How I Can Help You</h3>
-            <p>I can help in lots of ways</p>
-            */}
+            {/* <h3>How I Can Help You</h3> */}
+            {/* <p>I can help in lots of ways</p> */}
           </div>
         </div>
       </div>
