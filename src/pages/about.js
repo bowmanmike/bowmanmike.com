@@ -6,16 +6,17 @@ import Seo from '../components/Seo';
 const AboutPage = () => (
   <div>
     <Seo title="About" />
-    <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    {/* <div className="relative mx-auto py-16 px-4 sm:px-6 lg:px-8"> */}
+    <div className="relative mx-auto">
       <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
       <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
-          <h3 className="mt-2 text-xl leading-8 tracking-tight sm:text-2xl">
-            Hi! I'm Mike!
+          <h3 className="mt-2 text-2xl leading-8 tracking-tight sm:text-2xl">
+            Who Am I?
           </h3>
         </div>
       </div>
-      <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         <div className="relative lg:row-start-1 lg:col-start-2">
           <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
             <div className="aspect-w-12 aspect-h-7 lg:aspect-none">

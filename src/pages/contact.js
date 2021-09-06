@@ -5,10 +5,10 @@ import Seo from '../components/Seo';
 const ContactPage = () => (
   <div>
     <Seo title="Contact" />
-    <div className="max-w-7xl mx-auto py-4 lg:py-24 lg:px-8">
+    <div className="max-w-7xl mx-auto">
       <div>
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-          <h2 className="text-2xl font-bold">Get in touch</h2>
+          <h2 className="text-2xl">Get in touch</h2>
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
             <div>
               <h3 className="text-lg leading-6 font-medium">Email</h3>
