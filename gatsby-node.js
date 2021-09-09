@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const posts = result.data.blog.posts
+  const posts = result.data.blog.posts;
   posts.forEach(({ node }, i) => {
     const {
       frontmatter: { slug },
