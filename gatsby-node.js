@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query {
       blog: allMarkdownRemark(
         filter: { frontmatter: { published: { eq: true } } }
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         posts: edges {
           node {
@@ -20,16 +21,21 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  result.data.blog.posts.forEach(({ node }) => {
+  const posts = result.data.blog.posts
+  posts.forEach(({ node }, i) => {
     const {
       frontmatter: { slug },
     } = node;
+    const next_slug = posts[i - 1]?.node?.frontmatter?.slug;
+    const prev_slug = posts[i + 1]?.node?.frontmatter?.slug;
 
     createPage({
       path: `blog/${slug}`,
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         slug,
+        prev_slug,
+        next_slug,
       },
     });
   });
