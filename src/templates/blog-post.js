@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 const NextPrev = ({ prevSlug, nextSlug }) => {
-  console.log(prevSlug, nextSlug);
   return (
     <div>
       {prevSlug && <Link to={`/blog/${prevSlug}`}>Previous</Link>}
