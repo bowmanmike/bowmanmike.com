@@ -1,18 +1,26 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-const BlogPost = ({ data: { post }, pageContext: {prev_slug, next_slug}}) => {
+const NextPrev = ({ prevSlug, nextSlug }) => {
+  console.log(prevSlug, nextSlug);
+  return (
+    <div>
+      {prevSlug && <Link to={`/blog/${prevSlug}`}>Previous</Link>}
+      {nextSlug && <Link to={`/blog/${nextSlug}`}>Next</Link>}
+    </div>
+  );
+};
+
+const BlogPost = ({ data: { post }, pageContext: { prevSlug, nextSlug } }) => {
   return (
     <>
+      <NextPrev nextSlug={nextSlug} prevSlug={prevSlug} />
       <article>
         <h2>{post.frontmatter.title}</h2>
         <small>{post.frontmatter.date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
-      <div>
-        {prev_slug && <Link to={`/blog/${prev_slug}`}>Previous</Link>}
-        {next_slug && <Link to={`/blog/${next_slug}`}>Next</Link>}
-      </div>
+      <NextPrev nextSlug={nextSlug} prevSlug={prevSlug} />
     </>
   );
 };
