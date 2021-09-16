@@ -1,19 +1,32 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-const NextPrev = ({ prevSlug, nextSlug }) => {
+const NextPrev = ({ prevPost, nextPost }) => {
   return (
-    <div className="flex justify-center">
-      {prevSlug && <Link to={`/blog/${prevSlug}`}>&#8592; Previous</Link>}
-      {nextSlug && <Link to={`/blog/${nextSlug}`}>Next &#8594;</Link>}
+    <div className="flex justify-around">
+      <p>
+        {prevPost.slug && (
+          <Link to={`/blog/${prevPost.slug}`}>
+            &#8592; {prevPost.title}
+          </Link>
+        )}
+      </p>
+      <span className="px-4">&mdash;</span>
+      <p>
+        {nextPost.slug && (
+          <Link to={`/blog/${nextPost.slug}`}>
+            {nextPost.title} &#8594;
+          </Link>
+        )}
+      </p>
     </div>
   );
 };
 
-const BlogPost = ({ data: { post }, pageContext: { prevSlug, nextSlug } }) => {
+const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => {
   return (
     <>
-      <NextPrev nextSlug={nextSlug} prevSlug={prevSlug} />
+      <NextPrev nextPost={nextPost} prevPost={prevPost} />
       <article>
         <h2 className="text-xl my-1">{post.frontmatter.title}</h2>
         <small className="text-lg">{post.frontmatter.date}</small>
@@ -22,7 +35,7 @@ const BlogPost = ({ data: { post }, pageContext: { prevSlug, nextSlug } }) => {
           className="prose"
         />
       </article>
-      <NextPrev nextSlug={nextSlug} prevSlug={prevSlug} />
+      <NextPrev nextPost={nextPost} prevPost={prevPost} />
     </>
   );
 };

@@ -14,6 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             frontmatter {
               slug
+              title
             }
           }
         }
@@ -26,16 +27,16 @@ exports.createPages = async ({ graphql, actions }) => {
     const {
       frontmatter: { slug },
     } = node;
-    const nextSlug = posts[i - 1]?.node?.frontmatter?.slug;
-    const prevSlug = posts[i + 1]?.node?.frontmatter?.slug;
+    const nextPost = posts[i - 1]?.node?.frontmatter;
+    const prevPost = posts[i + 1]?.node?.frontmatter;
 
     createPage({
       path: `blog/${slug}`,
       component: path.resolve('./src/templates/blog-post.js'),
       context: {
         slug,
-        prevSlug,
-        nextSlug,
+        prevPost,
+        nextPost,
       },
     });
   });
