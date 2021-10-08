@@ -3,18 +3,17 @@ import { graphql, Link } from 'gatsby';
 
 const NextPrev = ({ prevPost, nextPost }) => {
   return (
-    <div className="flex justify-around">
-      <p>
-        {prevPost && prevPost.slug && (
+    <div className="flex justify-evenly">
+      {prevPost && prevPost.slug && (
+        <p className="border border-black p-2 my-4">
           <Link to={`/blog/${prevPost.slug}`}>&#8592; {prevPost.title}</Link>
-        )}
-      </p>
-      {nextPost && prevPost && <span className="px-4">&mdash;</span>}
-      <p>
-        {nextPost && nextPost.slug && (
+        </p>
+      )}
+      {nextPost && nextPost.slug && (
+        <p className="border border-black p-2 my-4">
           <Link to={`/blog/${nextPost.slug}`}>{nextPost.title} &#8594;</Link>
-        )}
-      </p>
+        </p>
+      )}
     </div>
   );
 };
