@@ -5,18 +5,14 @@ const NextPrev = ({ prevPost, nextPost }) => {
   return (
     <div className="flex justify-around">
       <p>
-        {prevPost.slug && (
-          <Link to={`/blog/${prevPost.slug}`}>
-            &#8592; {prevPost.title}
-          </Link>
+        {prevPost && prevPost.slug && (
+          <Link to={`/blog/${prevPost.slug}`}>&#8592; {prevPost.title}</Link>
         )}
       </p>
-      <span className="px-4">&mdash;</span>
+      {nextPost && prevPost && <span className="px-4">&mdash;</span>}
       <p>
-        {nextPost.slug && (
-          <Link to={`/blog/${nextPost.slug}`}>
-            {nextPost.title} &#8594;
-          </Link>
+        {nextPost && nextPost.slug && (
+          <Link to={`/blog/${nextPost.slug}`}>{nextPost.title} &#8594;</Link>
         )}
       </p>
     </div>
