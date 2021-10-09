@@ -1,6 +1,12 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
+const formatDate = (dateString) => {
+  const d = new Date(dateString)
+
+  return d.toLocaleString('en-CA', {month: 'long', year: 'numeric', day: 'numeric'})
+}
+
 const NextPrev = ({ prevPost, nextPost }) => {
   return (
     <div className="flex justify-evenly">
@@ -23,11 +29,13 @@ const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => {
     <>
       <NextPrev nextPost={nextPost} prevPost={prevPost} />
       <article>
-        <h2 className="text-xl my-1">{post.frontmatter.title}</h2>
-        <small className="text-lg">{post.frontmatter.date}</small>
+        <header className="py-2 text-center my-4">
+          <h2 className="text-xl lg:text-2xl mb-2">{post.frontmatter.title}</h2>
+          <small className="text-base">Published on {formatDate(post.frontmatter.date)}</small>
+        </header>
         <div
           dangerouslySetInnerHTML={{ __html: post.html }}
-          className="prose"
+          className="prose lg:prose-lg prose-sky text-justify mx-auto"
         />
       </article>
       <NextPrev nextPost={nextPost} prevPost={prevPost} />
