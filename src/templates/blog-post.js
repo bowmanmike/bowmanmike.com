@@ -1,11 +1,15 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-const formatDate = (dateString) => {
-  const d = new Date(dateString)
+const formatDate = dateString => {
+  const d = new Date(dateString);
 
-  return d.toLocaleString('en-CA', {month: 'long', year: 'numeric', day: 'numeric'})
-}
+  return d.toLocaleString('en-CA', {
+    month: 'long',
+    year: 'numeric',
+    day: 'numeric',
+  });
+};
 
 const NextPrev = ({ prevPost, nextPost }) => {
   return (
@@ -31,7 +35,9 @@ const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => {
       <article>
         <header className="py-2 text-center my-4">
           <h2 className="text-xl lg:text-2xl mb-2">{post.frontmatter.title}</h2>
-          <small className="text-base">Published on {formatDate(post.frontmatter.date)}</small>
+          <small className="text-base">
+            Published on {formatDate(post.frontmatter.date)}
+          </small>
         </header>
         <div
           dangerouslySetInnerHTML={{ __html: post.html }}
