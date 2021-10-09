@@ -14,7 +14,7 @@ This is the console. It’s the window into the wonderful world of Javascript. T
 So you’ve used the console, you’ve played with Javascript. “But wait,” you ask, “Mike, I thought you were learning Ruby! What’s with the Javascript?” Well, they serve different purposes, though at the core, they can do a lot of the same things. Ruby is great for telling a website what to do. What information to display on the page, what webpage to show you when you visit a particular URL, things like that. Javascript is great at making your webpage “jiggly,” as one of my classmates described it. Any time the content on a webpage changes, it’s probably Javascript. They also look super different. Ruby is meant to be easy for the developer to use. It’s syntax is pretty similar to natural English, at least as far as programming languages go. Javascript looks a lot more like what people tend to expect programming languages to look like. There’s significant syntax to learn, which will break your program if not followed. Here’s a side by side. Try and figure out what each program does before you read any further. Ruby on top, Javascript underneath.
 
 <span class="image-caption">FizzBuzz in Ruby</span>
-{% highlight ruby linenos %}
+```ruby
 def fizz_buzz
   (1..100).each do |number|
     if (number % 5 == 0 && number % 3 == 0)
@@ -28,10 +28,10 @@ def fizz_buzz
     end
   end
 end
-{% endhighlight %}
+```
 
 <span class="image-caption">FizzBuzz in Javascript</span>
-{% highlight javascript linenos %}
+```javascript
 function fizzBuzz() {
   for(i = 0; i < 101; i++) {
     if (i % 5 === 0 && i % 3 === 0) {
@@ -45,7 +45,7 @@ function fizzBuzz() {
     }
   }
 }
-{% endhighlight %}
+```
 
 This is a common, entry-level programming challenge called FizzBuzz. The objective is to write a short program that will print out all the numbers between one and a hundred. The trick is that if a number is a multiple of 5, print “Fizz” instead, if it’s a multiple of 3, print “Buzz,” and if it’s a multiple of both 3 and 5, print “FizzBuzz. It’s a short program, but it’s interesting to illustrate the differences between languages. (If you’re interested in the differences between languages, check out [this website](http://rosettacode.org/wiki/Rosetta_Code), which provides solutions to various problems written in bazillions of different programming languages. It’s pretty cool stuff.)
 
