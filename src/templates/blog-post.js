@@ -14,12 +14,12 @@ const formatDate = dateString => {
 const NextPrev = ({ prevPost, nextPost }) => {
   return (
     <div className="flex justify-evenly">
-      {prevPost && prevPost.slug && (
+      {prevPost && (
         <p className="border border-gray-800 p-2 my-4">
           <Link to={`/blog/${prevPost.slug}`}>&#8592; {prevPost.title}</Link>
         </p>
       )}
-      {nextPost && nextPost.slug && (
+      {nextPost && (
         <p className="border border-gray-800 p-2 my-4">
           <Link to={`/blog/${nextPost.slug}`}>{nextPost.title} &#8594;</Link>
         </p>
