@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../components/Seo';
+import JobGrid from '../components/JobGrid';
 
 const IndexPage = () => (
   <>
@@ -8,13 +9,12 @@ const IndexPage = () => (
     <h2>Hi! I'm Mike.</h2>
     <p>I'm a software developer based in Toronto.</p>
     <p>
-      Right now, I work at <a href="https://pagerduty.com">PagerDuty</a>
+      Right now, I'm working as a Web Development Mentor at{' '}
+      <a href="https://lighthouselabs.ca">Lighthouse Labs</a>, and as a
+      Freelance Full-Stack Developer.
     </p>
-    <p>
-      Previously, I've worked at {/* Should put in their logos here! */}
-      <a href="https://thescore.com">theScore</a> and{' '}
-      <a href="https://zoocasa.com">Zoocasa.</a>
-    </p>
+    <p>Previously, I've worked at... {/* Should put in their logos here! */}</p>
+    <JobGrid />
   </>
 );
 
