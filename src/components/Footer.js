@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer>
-    <p className="text-center mt-8">
+  <footer className="bg-red-300 mx-auto">
+    <p className="text-center">
       Mike Bowman &copy; 2016 - {new Date().getFullYear()}
     </p>
   </footer>

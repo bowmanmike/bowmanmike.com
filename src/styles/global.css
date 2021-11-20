@@ -4,11 +4,12 @@
 
 @layer base {
   body {
-    @apply bg-gray-50;
+    @apply bg-coolGray-100;
+    @apply font-sans;
   }
 }
 
-html,
-body {
-  overflow-y: scroll;
-}
+/* html, */
+/* body { */
+/*   overflow-y: scroll; */
+/* } */
