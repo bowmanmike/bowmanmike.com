@@ -41,7 +41,7 @@ Pretty neat huh?
 
 #### Other Fun JQ Stuff
 As some of you may know, I'm a fan of Vim (well, specifically Neovim) for the vast majority of my code editing needs. Vim integrates super well with command line tooling like `jq`, so I've got a few useful little custom vim functions to manipulate JSON in a sane way. I like to have the ability to minify or prettify my JSON files as I'm workin, and in Vim, invoking `jq` from within the editor is dead easy. I've got two short VimScript functions that I've mapped to easy shortcuts.
-```vimscript
+```vim
 function PrettyPrintJSON()
   :%!jq '.' -M
 endfunction
