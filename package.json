@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Mike Bowman <mike.bowman@hey.com>",
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "dotenv": "^8.6.0",
