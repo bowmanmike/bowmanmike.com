@@ -14,9 +14,9 @@ const Layout = ({ children }) => (
         rel="stylesheet"
       />
     </Helmet>
-    <div className="max-w-full text-gray-700">
+    <div className="max-w-6xl mx-auto text-gray-700">
       <Header />
-      <main className="max-w-6xl mx-auto px-8 my-4">{children}</main>
+      <main className="max-w-6xl mx-auto my-4">{children}</main>
       <Footer />
     </div>
   </>
