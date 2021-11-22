@@ -6,7 +6,7 @@ import { FaEnvelopeOpen } from '@react-icons/all-files/fa/FaEnvelopeOpen';
 const ContactMethod = ({ href, text, children }) => (
   <li className="my-4">
     <a href={href}>
-      <p className="border border-gray-400 shadow-lg p-2 inline-block hover:bg-gray-100 w-1/2 text-center">
+      <p className="border border-gray-400 shadow-lg p-2 inline-block hover:bg-gray-100 w-full md:w-1/2 text-center">
         {children}
         {text}
       </p>

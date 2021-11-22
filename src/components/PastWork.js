@@ -1,10 +1,14 @@
 import React from 'react';
 
 const PastWork = () => (
-  <div className="my-12">
+  <div className="border border-gray-400 lg:p-4 lg:m-4 rounded-lg shadow-sm my-4 p-2">
     <p>
       Right now, I'm working as a Web Development Mentor at{' '}
-      <a href="https://lighthouselabs.ca">Lighthouse Labs</a>
+      <a href="https://lighthouselabs.ca">Lighthouse Labs</a>. I'm also
+      available for freelance or contract work, so{' '}
+      <a href="mailto:mike@mikebowman.dev" className="underline">
+        get in touch!
+      </a>
     </p>
     <p>
       Previously, I've worked at {/* Should put in their logos here! */}

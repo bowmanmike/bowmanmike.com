@@ -8,20 +8,20 @@ import Contact from '../components/Contact';
 const IndexPage = () => (
   <>
     <Seo title="Home" />
-    <div className="grid grid-cols-2 gap-4 mb-8">
+    <div className="grid lg:grid-cols-2 mb-8">
       <StaticImage
         src="../assets/images/mike-headshot-cropped.png"
         alt="Mike Bowman Headshot"
-        loading="eager"
-        placeholder="blurred"
-        className="max-w-sm rounded-full shadow-lg"
+        className="max-w-sm rounded-full shadow-lg mx-auto my-8"
+        imgClassName="rounded-full"
         aspectRatio={1}
         transformOptions={{ cropFocus: 'attention' }}
+        placeholder="none"
       />
       <Contact />
     </div>
     <div>
-      <div className="text-center border border-gray-400 p-4 m-4 rounded-lg shadow-sm">
+      <div className="text-center border border-gray-400 p-2 lg:p-4 my-4 lg:m-4 rounded-lg shadow-sm">
         <h2 className="text-2xl text-center">Hi! I'm Mike.</h2>
         <p>I'm a software developer based in Toronto.</p>
         <p>
@@ -32,7 +32,7 @@ const IndexPage = () => (
         <p>I'm a software developer based in Toronto.</p>
         <p>I'm a software developer based in Toronto.</p>
       </div>
-      <div className="border border-gray-400 p-4 m-4 rounded-lg shadow-sm">
+      <div className="border border-gray-400 p-2 lg:p-4 my-4 lg:m-4 rounded-lg shadow-sm">
         <h3>I'm experienced with:</h3>
         <ul>
           <li>Ruby on Rails</li>
