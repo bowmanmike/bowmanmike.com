@@ -9,7 +9,7 @@ import ReactLogo from '../assets/images/react-icon.svg';
 import GoLogo from '../assets/images/go-logo.svg';
 
 const TechCard = ({ name, children }) => (
-  <div className="border border-gray-500 rounded-lg shadow-lg bg-gray-200 bg-gradient-to-b from-gray-300 grid items-center justify-center">
+  <div className="border border-gray-500 rounded-lg shadow-lg bg-gray-200 bg-gradient-to-b from-gray-300 grid auto-cols-min items-center justify-center">
     <p className="text-center text-lg">{name}</p>
     {children}
   </div>
