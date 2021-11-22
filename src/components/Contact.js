@@ -15,7 +15,7 @@ const ContactMethod = ({ href, text, children }) => (
 );
 
 const Contact = () => (
-  <div className="bg-orange-200 grid items-center">
+  <div className="grid items-center">
     <ul className="text-lg text-center">
       <ContactMethod
         text="mike@mikebowman.dev"

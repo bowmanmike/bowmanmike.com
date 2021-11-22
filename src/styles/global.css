@@ -5,10 +5,10 @@
 @layer base {
   body {
     @apply bg-coolGray-100;
-    @apply font-sans;
   }
 }
 
 html {
   overflow-y: scroll;
+  @apply font-sans;
 }

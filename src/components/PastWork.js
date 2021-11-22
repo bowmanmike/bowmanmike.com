@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PastWork = () => (
-  <div className="bg-yellow-200 my-12">
+  <div className="my-12">
     <p>
       Right now, I'm working as a Web Development Mentor at{' '}
       <a href="https://lighthouselabs.ca">Lighthouse Labs</a>

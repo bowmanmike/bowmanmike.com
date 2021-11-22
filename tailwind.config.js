@@ -10,6 +10,9 @@ module.exports = {
         ...colors,
         sky: colors.sky,
       },
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],
+      },
     },
   },
   variants: {
