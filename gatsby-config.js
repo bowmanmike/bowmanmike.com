@@ -33,8 +33,8 @@ module.exports = {
             resolve: 'gatsby-remark-images',
           },
           {
-            resolve: 'gatsby-remark-prismjs'
-          }
+            resolve: 'gatsby-remark-prismjs',
+          },
         ],
       },
     },
@@ -53,6 +53,14 @@ module.exports = {
     // },
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
