@@ -3,7 +3,7 @@ const path = require('path');
 const gql = String.raw;
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
   const result = await graphql(gql`
     query {
       blog: allMarkdownRemark(
@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const posts = result.data.blog.posts;
+  const { posts } = result.data.blog;
   posts.forEach(({ node }, i) => {
     const {
       frontmatter: { slug },
@@ -39,5 +39,16 @@ exports.createPages = async ({ graphql, actions }) => {
         nextPost,
       },
     });
+  });
+
+  createRedirect({
+    fromPath: '/js/script.js',
+    toPath: 'https://plausible.io/js/plausible.js',
+    statusCode: 200,
+  });
+  createRedirect({
+    fromPath: '/api/event',
+    toPath: 'https://plausible.io/api/event',
+    statusCode: 202,
   });
 };
