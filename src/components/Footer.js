@@ -35,8 +35,8 @@ const Footer = () => (
       Hosted on{' '}
       <LogoLink href="https://www.netlify.com" baseColour="#4caa9f">
         <SiNetlify /> Netlify
-      </LogoLink>
-      , with privacy-friendly analytics provided by{' '}
+      </LogoLink>{' '}
+      with privacy-friendly analytics provided by{' '}
       <LogoLink href="https://plausible.io" baseColour="#453ddb">
         <SiPlausibleanalytics /> Plausible.io
       </LogoLink>
