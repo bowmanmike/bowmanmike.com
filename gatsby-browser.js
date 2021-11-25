@@ -11,7 +11,7 @@ import Layout from './src/components/Layout.js';
 
 import './src/styles/global.css';
 
-require("prismjs/themes/prism-tomorrow.css")
+require('prismjs/themes/prism-tomorrow.css');
 
 export function wrapPageElement({ element, props }) {
   return <Layout {...props}>{element}</Layout>;
