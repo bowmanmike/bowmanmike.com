@@ -1,7 +1,10 @@
 import React from 'react';
-import SiGatsby from '@react-icons/all-files/si/SiGatsby';
-import SiTailwindcss from '@react-icons/all-files/si/SiTailwindcss';
-import SiNetlify from '@react-icons/all-files/si/SiNetlify';
+import {
+  SiGatsby,
+  SiTailwindcss,
+  SiNetlify,
+  SiPlausibleanalytics,
+} from 'react-icons/si';
 
 const LogoLink = ({ href, baseColour, children }) => {
   const styles = { backgroundColor: baseColour };
@@ -21,17 +24,21 @@ const Footer = () => (
     <p className="my-2">
       This site was built by hand with{' '}
       <LogoLink href="https://www.gatsbyjs.com" baseColour="#672ab2">
-        <SiGatsby.SiGatsby /> GatsbyJS
+        <SiGatsby /> GatsbyJS
       </LogoLink>{' '}
       and{' '}
       <LogoLink href="https://www.tailwindcss.com" baseColour="#52b3d1">
-        <SiTailwindcss.SiTailwindcss /> TailwindCSS
+        <SiTailwindcss /> TailwindCSS
       </LogoLink>
     </p>
     <p className="my-2">
       Hosted on{' '}
       <LogoLink href="https://www.netlify.com" baseColour="#4caa9f">
-        <SiNetlify.SiNetlify /> Netlify
+        <SiNetlify /> Netlify
+      </LogoLink>
+      , with privacy-friendly analytics provided by{' '}
+      <LogoLink>
+        <SiPlausibleanalytics /> Plausible.io
       </LogoLink>
     </p>
     <p className="my-2">Mike Bowman &copy; 2016 - {new Date().getFullYear()}</p>

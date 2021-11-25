@@ -1,7 +1,5 @@
 import React from 'react';
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
-import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin';
-import { FaEnvelopeOpen } from '@react-icons/all-files/fa/FaEnvelopeOpen';
+import { FaGithub, FaLinkedin, FaEnvelopeOpen } from 'react-icons/fa';
 
 const ContactMethod = ({ href, text, methodName, children }) => (
   <li className="m-4">
