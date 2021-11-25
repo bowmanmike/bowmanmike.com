@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PastWork = () => (
-  <div className="border border-gray-400 lg:p-4 lg:mx-0 rounded-lg shadow-sm m-4 p-2">
+  <div className="border border-gray-400 lg:p-4 lg:mx-0 shadow-md m-4 p-2">
     <p>
       Right now, I'm working as a Web Development Mentor at{' '}
       <a href="https://lighthouselabs.ca">Lighthouse Labs</a>. I'm also
