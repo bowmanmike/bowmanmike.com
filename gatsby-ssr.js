@@ -17,7 +17,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
       <link
         key="plausible-preconnect"
         rel="preconnect"
-        href={`https://${PLAUSIBLE_DOMAIN}`}
+        href="https://plausible.io"
       />,
       <script
         key="plausible-script"
