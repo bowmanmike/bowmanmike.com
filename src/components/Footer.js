@@ -11,7 +11,7 @@ const LogoLink = ({ href, baseColour, children }) => {
   return (
     <a
       href={href}
-      className="text-gray-50 px-2 rounded-md shadow-md inline-flex items-center justify-center"
+      className="text-gray-50 px-2 rounded-md shadow-md inline-flex items-center justify-center gap-1"
       style={styles}
     >
       {children}
@@ -37,7 +37,7 @@ const Footer = () => (
         <SiNetlify /> Netlify
       </LogoLink>
       , with privacy-friendly analytics provided by{' '}
-      <LogoLink>
+      <LogoLink href="https://plausible.io" baseColour="#453ddb">
         <SiPlausibleanalytics /> Plausible.io
       </LogoLink>
     </p>
