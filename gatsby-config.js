@@ -65,6 +65,7 @@ module.exports = {
     //   resolve: 'gatsby-plugin-plausible',
     //   options: {
     //     domain: 'mikebowman.dev',
+    //     customDomain: '/',
     //   },
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
