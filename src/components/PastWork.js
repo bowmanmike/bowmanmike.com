@@ -9,8 +9,13 @@ import PagerDutyLogo from '../assets/images/pagerduty-logo.svg';
 const LogoCard = ({ href, baseColour, children }) => {
   const styles = { backgroundColor: baseColour };
   return (
-    <a href={href} className="max-w-max p-2" style={styles}>
-      <div className="h-full max-w-full w-full">{children}</div>
+    <a
+      href={href}
+      className="border border-gray-400 shadow-md p-4 w-full h-full md:h-full"
+    >
+      <div className="h-full max-w-full w-full p-2 rounded-md" style={styles}>
+        {children}
+      </div>
     </a>
   );
 };
@@ -20,16 +25,20 @@ const PastWork = () => (
     <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8">
       Work Experience
     </h2>
-    <div className="my-4 max-w-max">
-      <p className="inline-block align-bottom">
+    <div className="my-4 w-full">
+      <p className="inline-block md:align-bottom w-1/2 md:w-max">
         Currently a Web Development Mentor at
       </p>
-      <a href="https://lighthouselabs.ca" className="inline-block align-middle">
-        <LHLLogo className="" width="100%" height={50} />
+      <a
+        href="https://lighthouselabs.ca"
+        className="inline-block md:align-middle md:pl-2 w-1/2 max-w-max"
+      >
+        <LHLLogo className="" width="100%" height="2.5rem" />
       </a>
     </div>
-    <div className="grid md:grid-cols-3 items-center justify-items-center gap-4 max-w-max mb-4 text-center md:text-left p-2">
-      <h3 className="inline-block col-span-3 md:col-span-3 justify-self-start">
+    <div className="border-b-2 border-sage mb-2" />
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-items-center max-w-max mb-4 text-center md:text-left">
+      <h3 className="inline-block col-span-1 md:col-span-3 justify-self-start">
         Previously learned at...
       </h3>{' '}
       <LogoCard href="https://pagerduty.com">
@@ -43,18 +52,22 @@ const PastWork = () => (
           src="../assets/images/zoocasa-logo.png"
           alt="Zoocasa Logo"
           height="2.5rem"
+          className="w-full"
         />
       </LogoCard>
     </div>
-    <div className="text-center md:text-left p-2 max-w-max">
-      <p className="inline-block">Next Adventure: You!</p>
-      <a href="mailto:mike@mikebowman.dev" className="inline-block">
-        <p className="py-1 px-2 text-lg inline-block bg-sage w-full text-center mx-4">
+    <div className="border-b-2 border-sage mb-4" />
+    <div className="text-center md:text-left p-2 md:p-4 max-w-max border border-gray-400 shadow-md mx-auto text-xl">
+      <p className="inline-block mb-2">Next Adventure: You!</p>
+      <a
+        href="mailto:mike@mikebowman.dev"
+        className="inline-block border border-gray-400 md:ml-4 w-full md:w-max"
+      >
+        <p className="sr-only">Email Address</p>
+        <p className="text-lg bg-sage text-center py-2 px-4">
           <FaEnvelopeOpen className="inline-block mr-2" />
-          <p className="sr-only">Email Address</p>
           mike@mikebowman.dev
         </p>
-        <p className="sr-only">Email Address</p>
       </a>
     </div>
   </div>

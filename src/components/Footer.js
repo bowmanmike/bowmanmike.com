@@ -41,7 +41,9 @@ const Footer = () => (
         <SiPlausibleanalytics /> Plausible.io
       </LogoLink>
     </p>
-    <p className="my-2">Mike Bowman &copy; 2016 - {new Date().getFullYear()}</p>
+    <p className="mt-8 mb-4">
+      Mike Bowman &copy; 2016 - {new Date().getFullYear()}
+    </p>
   </footer>
 );
 export default Footer;
