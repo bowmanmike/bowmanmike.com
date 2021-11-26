@@ -38,10 +38,10 @@ const IndexPage = () => (
           Hi! I'm Mike, and I'm here to help
         </h2>
         <p>
-          I'm a software developer based in Toronto, and available to your
-          business's improve online presence. Whether you need a custom
-          e-commerce solution, a back-end framework migration, or a slick new
-          front-end, I can help.
+          I'm a software developer based in Toronto, and available to improve
+          your business's online presence. Whether you need a custom e-commerce
+          solution, a back-end framework migration, or a slick new front-end, I
+          can help.
         </p>
         <p>
           I have {new Date().getFullYear() - 2016}+ years of experience as a
