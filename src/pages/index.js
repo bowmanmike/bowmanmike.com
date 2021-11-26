@@ -9,7 +9,7 @@ import ReactLogo from '../assets/images/react-icon.svg';
 import GoLogo from '../assets/images/go-logo.svg';
 
 const TechCard = ({ name, href, children }) => (
-  <a href={href} className="border border-gray-400 shadow-md">
+  <a href={href} className="border border-gray-400 shadow-md hover:underline">
     <div className="p-4 h-full min-h-full grid justify-center items-center grid-rows-1">
       {children}
       <p className="text-center text-lg self-end">{name}</p>
@@ -34,8 +34,8 @@ const IndexPage = () => (
     </div>
     <div>
       <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md text-justify space-y-4">
-        <h2 className="text-2xl text-center mb-4">
-          Hi! I'm Mike, and I'm here to help.
+        <h2 className="text-2xl text-center mb-4 border-sage border-b-4 max-w-max pr-8">
+          Hi! I'm Mike, and I'm here to help
         </h2>
         <p>
           I'm a software developer based in Toronto, and available to your
@@ -58,7 +58,9 @@ const IndexPage = () => (
       </div>
       {/* TODO: Need to only be listing the margin and padding values in 1 place. Probably a top-level container */}
       <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:mx-0 shadow-md">
-        <h3 className="text-2xl mb-2">My Toolbelt</h3>
+        <h3 className="text-2xl mb-2 border-sage border-b-4 max-w-max pr-8">
+          My Toolbelt
+        </h3>
         <p>
           While I'll use whichever tool is best for the job, I have significant
           experience with these particular tools
