@@ -11,7 +11,7 @@ const LogoCard = ({ href, baseColour, children }) => {
   return (
     <a
       href={href}
-      className="border border-gray-400 shadow-md p-4 w-full h-full"
+      className="border border-gray-400 shadow-md p-4 w-full h-24 md:h-full"
     >
       <div
         className="h-full max-w-full p-2 rounded-md flex items-center"
