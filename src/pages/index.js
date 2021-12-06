@@ -4,6 +4,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/Seo';
 import PastWork from '../components/PastWork';
 import Contact from '../components/Contact';
+import BlogHighlight from '../components/BlogHighlight';
+
 import RailsLogo from '../assets/images/rails-logo.svg';
 import ReactLogo from '../assets/images/react-icon.svg';
 import GoLogo from '../assets/images/go-logo.svg';
@@ -80,12 +82,13 @@ const IndexPage = () => (
             <ReactLogo alt="React Logo" className="w-full" />
           </TechCard>
           <TechCard name="Golang" href="https://golang.org">
-            <GoLogo alt="Golang Logo" className="w-full"/>
+            <GoLogo alt="Golang Logo" className="w-full" />
           </TechCard>
         </div>
       </div>
     </div>
     <PastWork />
+    <BlogHighlight />
   </>
 );
 
