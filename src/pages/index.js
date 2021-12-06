@@ -67,19 +67,20 @@ const IndexPage = () => (
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
           <TechCard name="Ruby on Rails" href="https://rubyonrails.org">
-            <RailsLogo alt="Rails Logo" />
+            <RailsLogo className="w-full" alt="Rails Logo" />
           </TechCard>
           <TechCard name="Elixir & Phoenix" href="https://phoenixframework.com">
             <StaticImage
               src="../assets/images/phoenix-logo.png"
               alt="Phoenix Logo"
+              className="w-full"
             />{' '}
           </TechCard>
           <TechCard name="React" href="https://reactjs.org">
-            <ReactLogo alt="React Logo" />
+            <ReactLogo alt="React Logo" className="w-full" />
           </TechCard>
           <TechCard name="Golang" href="https://golang.org">
-            <GoLogo alt="Golang Logo" />
+            <GoLogo alt="Golang Logo" className="w-full"/>
           </TechCard>
         </div>
       </div>

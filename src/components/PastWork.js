@@ -11,9 +11,12 @@ const LogoCard = ({ href, baseColour, children }) => {
   return (
     <a
       href={href}
-      className="border border-gray-400 shadow-md p-4 w-full h-full md:h-full"
+      className="border border-gray-400 shadow-md p-4 w-full h-24 md:h-full"
     >
-      <div className="h-full max-w-full w-full p-2 rounded-md" style={styles}>
+      <div
+        className="h-full max-w-full p-2 rounded-md flex items-center"
+        style={styles}
+      >
         {children}
       </div>
     </a>
@@ -42,17 +45,16 @@ const PastWork = () => (
         Previously learned at...
       </h3>{' '}
       <LogoCard href="https://pagerduty.com">
-        <PagerDutyLogo height="2.5rem" width="100%" />
+        <PagerDutyLogo width="100%" className="h-full" />
       </LogoCard>
       <LogoCard href="https://thescore.com" baseColour="#1a1a1c">
-        <TheScoreLogo height="2.5rem" width="100%" />
+        <TheScoreLogo width="100%" className="h-full" />
       </LogoCard>
       <LogoCard href="https://zoocasa.com" baseColour="#171a1c">
         <StaticImage
           src="../assets/images/zoocasa-logo.png"
           alt="Zoocasa Logo"
-          height="2.5rem"
-          className="w-full"
+          imgClassName="h-full"
         />
       </LogoCard>
     </div>
