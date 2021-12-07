@@ -5,7 +5,7 @@ slug: json-fun-for-everyone
 published: true
 ---
 
-Friends! Settle in, I've got a good one for you today. I want to talk to you all about my favourite data-interchange format! What's that? Nobody has a favourite data-interchange format? Nonsense! Everyone has one. Mine is JSON. Heard of it? Yeah, I thought so.
+Friends! Settle in, I've got a good one for you today. I want to talk to you all about my favourite data-interchange format! What's that? Nobody has a favourite data-interchange format? Nonsense! <!-- endexcerpt --> Everyone has one. Mine is JSON. Heard of it? Yeah, I thought so.
 
 It's everywhere in the web world. I'm not going to go into the details of what JSON is in this post, or what it stands for, or where it comes from, but if you're interested in that information, check out [www.json.org](https://www.json.org). What I want to talk about here is some tricks to handling large amounts of JSON in a sane, speedy fashion. Because nobody likes crashing their text editor trying to open a 400mb JSON file holding 85,000 records with upwards of 20 fields each, because they're trying to find out the lowest value of one particular field. Yeah, definitely did that to myself at least once. It took an embarrassingly long time until I realized that there must be a better way, but once I found it, hoooo boy. Things improved, let me tell ya.
 
