@@ -23,7 +23,9 @@ const Blog = ({ data, pageContext }) => {
           <Link key={slug} to={`/blog/${slug}`}>
             <div className="p-2 lg:p-4">
               <div className=" border-b-2 border-sage max-w-max pr-8">
-                <p className="text-lg">{post.frontmatter.title}</p>
+                <p className="text-lg italic font-medium">
+                  {post.frontmatter.title}
+                </p>
                 <p className="italic">Published {post.frontmatter.date}</p>
               </div>
               <p>{post.excerpt}</p>
