@@ -5,7 +5,7 @@ published: true
 slug: form-al-education
 ---
 
-And thus ends week two at Bitmaker. Another week of knowledge and information endlessly being thrown at us, like a child throwing spaghetti at the wall (Not sure that’s real imagery, but I’m into it). The past week was largely spent wrestling our previously mentioned command-line address book program into a fully-fledged, database-backed, web app.
+And thus ends week two at Bitmaker. Another week of knowledge and information endlessly being thrown at us, like a child throwing spaghetti at the wall <!-- endexcerpt --> (Not sure that’s real imagery, but I’m into it). The past week was largely spent wrestling our previously mentioned command-line address book program into a fully-fledged, database-backed, web app.
 
 <span class="image-caption">From this..</span>
 ![Command Line CRM](./crm-cli-screenshot.png)
