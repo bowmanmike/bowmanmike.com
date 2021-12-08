@@ -54,11 +54,11 @@ const FullPost = ({ togglePost, post }) => (
         Read less...
       </button>
     </div>
-    <p className="border border-gray-400 shadow-md py-2 px-4 text-center md:w-1/2 md:mx-auto">
-      <Link to="blog" className="">
+    <Link to="blog" className="">
+      <p className="border border-gray-400 shadow-md py-2 px-4 text-center md:w-1/2 md:mx-auto">
         More Posts!
-      </Link>
-    </p>
+      </p>
+    </Link>
   </div>
 );
 
