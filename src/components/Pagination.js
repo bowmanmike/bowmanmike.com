@@ -18,7 +18,7 @@ export default function Pagination({
       <Link
         className={`${
           !hasPrevPage ? 'pointer-events-none' : ''
-        } border border-gray-400 py-2 px-4`}
+        } border border-gray-400 py-2 px-4 hover:bg-sage-100`}
         disabled={!hasPrevPage}
         to={`${base}/${prevPage > 1 ? prevPage : ''}`}
       >
@@ -29,7 +29,7 @@ export default function Pagination({
           to={`${base}/${i > 0 ? i + 1 : ''}`}
           key={`page-${i}`}
           className={`border border-gray-400 py-2 px-4 ${
-            i + 1 === currentPage ? 'bg-sage bg-opacity-60' : ''
+            i + 1 === currentPage ? 'bg-sage-100' : ''
           }`}
         >
           {i + 1}
@@ -38,7 +38,7 @@ export default function Pagination({
       <Link
         className={`${
           !hasNextPage ? 'pointer-events-none' : ''
-        } border border-gray-400 px-4 py-2`}
+        } border border-gray-400 px-4 py-2 hover:bg-sage-100`}
         disabled={!hasNextPage}
         to={`${base}/${nextPage}`}
       >
