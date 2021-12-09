@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-coolGray-100;
+    @apply bg-gray-100;
   }
 }
 
