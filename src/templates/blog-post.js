@@ -2,12 +2,11 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import { formatDate } from '../lib/formatDate';
-import NavButton from '../components/NavButton';
 
 const homeSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-2"
+    className="h-5 w-5 lg:mr-2"
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -18,7 +17,7 @@ const homeSvg = (
 const bookSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-2"
+    className="h-5 w-5 lg:mr-2"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -35,7 +34,7 @@ const bookSvg = (
 const prevSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-2"
+    className="h-5 w-5 mx-auto lg:mr-2 lg:ml-0"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -52,7 +51,7 @@ const prevSvg = (
 const nextSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 ml-2"
+    className="h-5 w-5 mx-auto lg:ml-2 lg:mr-0"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -66,33 +65,74 @@ const nextSvg = (
   </svg>
 );
 
+const ButtonPlaceholder = ({ content, icon }) => (
+  <button
+    type="button"
+    disabled
+    className="pointer-events-none border border-gray-400 px-4 py-2 mb-4 inline-block hover:bg-sage-100 shadow-md bg-gray-300 lg:bg-inherit text-center"
+  >
+    <span className="hidden lg:inline">{content}</span>
+    <span className="lg:hidden">{icon}</span>
+    <span className="sr-only">{content}</span>
+  </button>
+);
+
+const NavButton = ({ href, content, preIcon, postIcon }) => (
+  <Link
+    to={href}
+    className="border border-gray-400 px-4 py-2 mb-4 inline-block hover:bg-sage-100 shadow-md"
+  >
+    <p className="flex items-center justify-center">
+      {preIcon}
+      <span className="hidden lg:inline">{content}</span>
+      {postIcon}
+    </p>
+  </Link>
+);
+
 const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => (
   <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
     <article>
       <header className="py-2 text-center my-4">
-        <h2 className="text-xl lg:text-2xl mb-2 border-b-4 border-sage w-max mx-auto px-6">
+        <h2 className="text-xl lg:text-2xl mb-2 border-b-4 border-sage lg:w-max mx-auto px-6">
           {post.frontmatter.title}
         </h2>
         <small className="text-base italic">
           Published on {formatDate(post.frontmatter.date)}
         </small>
-        <nav className="grid grid-cols-2 grid-rows-2 gap-2 mx-auto mt-8 w-3/4">
-          <NavButton href="/" content="Go Back Home" icon={homeSvg} />
+        <nav className="grid grid-cols-4 lg:grid-cols-2 gap-2 mx-auto mt-8 lg:w-3/4">
+          <NavButton href="/" content="Go Back Home" preIcon={homeSvg} />
           {/* TODO: Would be cool to jump back to last visited blog page, if any, else, first page */}
-          <NavButton href="/blog" content="Back To All Posts" icon={bookSvg} />
           <NavButton
-            href={prevPost ? `/blog/${prevPost.slug}` : 'disabled'}
-            content={prevPost ? prevPost.title : 'You found the oldest post!'}
-            icon={prevPost && prevSvg}
+            href="/blog"
+            content="Back To All Posts"
+            preIcon={bookSvg}
           />
+          {prevPost ? (
+            <NavButton
+              href={`/blog/${prevPost.slug}`}
+              content={prevPost.title}
+              preIcon={prevSvg}
+            />
+          ) : (
+            <ButtonPlaceholder
+              content="Woah! You found the oldest post"
+              icon={prevSvg}
+            />
+          )}
 
-          <NavButton
-            href={nextPost ? `/blog/${nextPost?.slug}` : 'disabled'}
-            content={
-              nextPost ? nextPost?.title : 'This is the most recent post!'
-            }
-            postIcon={nextPost && nextSvg}
-          />
+          {nextPost ? (
+            <NavButton
+              href={`/blog/${nextPost.slug}`}
+              content={nextPost.title}
+              postIcon={nextSvg}
+            />
+          ) : (
+            <ButtonPlaceholder
+              content="This is the most recent post!"
+              icon={nextSvg}
+            />
+          )}
         </nav>
       </header>
       <div
