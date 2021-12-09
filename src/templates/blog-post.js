@@ -70,27 +70,31 @@ const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => (
   <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
     <article>
       <header className="py-2 text-center my-4">
-        <h2 className="text-xl lg:text-2xl mb-2">{post.frontmatter.title}</h2>
-        <small className="text-base">
+        <h2 className="text-xl lg:text-2xl mb-2 border-b-4 border-sage w-max mx-auto px-6">
+          {post.frontmatter.title}
+        </h2>
+        <small className="text-base italic">
           Published on {formatDate(post.frontmatter.date)}
         </small>
-      </header>
-      <nav className="grid grid-cols-2 grid-rows-2 gap-2 mx-auto">
-        <NavButton href="/" content="Go Back Home" icon={homeSvg} />
-        {/* TODO: Would be cool to jump back to last visited blog page, if any, else, first page */}
-        <NavButton href="/blog" content="Back To All Posts" icon={bookSvg} />
-        <NavButton
-          href={prevPost ? `/blog/${prevPost.slug}` : 'disabled'}
-          content={prevPost ? prevPost.title : 'You found the oldest post!'}
-          icon={prevPost && prevSvg}
-        />
+        <nav className="grid grid-cols-2 grid-rows-2 gap-2 mx-auto mt-8 w-3/4">
+          <NavButton href="/" content="Go Back Home" icon={homeSvg} />
+          {/* TODO: Would be cool to jump back to last visited blog page, if any, else, first page */}
+          <NavButton href="/blog" content="Back To All Posts" icon={bookSvg} />
+          <NavButton
+            href={prevPost ? `/blog/${prevPost.slug}` : 'disabled'}
+            content={prevPost ? prevPost.title : 'You found the oldest post!'}
+            icon={prevPost && prevSvg}
+          />
 
-        <NavButton
-          href={nextPost ? `/blog/${nextPost?.slug}` : 'disabled'}
-          content={nextPost ? nextPost?.title : 'This is the most recent post!'}
-          postIcon={nextPost && nextSvg}
-        />
-      </nav>
+          <NavButton
+            href={nextPost ? `/blog/${nextPost?.slug}` : 'disabled'}
+            content={
+              nextPost ? nextPost?.title : 'This is the most recent post!'
+            }
+            postIcon={nextPost && nextSvg}
+          />
+        </nav>
+      </header>
       <div
         dangerouslySetInnerHTML={{ __html: post.html }}
         className="prose lg:prose-lg prose-sky text-justify mx-auto"
