@@ -10,6 +10,22 @@ const Blog = ({ data, pageContext }) => {
       <h2 className="text-2xl text-center mb-4 border-sage border-b-4 max-w-max pr-8">
         All Posts
       </h2>
+      <Link
+        to="/"
+        className="border border-gray-400 px-4 py-2 mb-4 inline-block"
+      >
+        <p className="flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          Go Back Home
+        </p>
+      </Link>
       <Pagination
         pageSize={parseInt(process.env.GATSBY_PAGE_SIZE)}
         totalCount={data.blog.totalCount}
