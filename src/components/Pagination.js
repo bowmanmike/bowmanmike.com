@@ -20,14 +20,14 @@ export default function Pagination({
           !hasPrevPage ? 'pointer-events-none bg-gray-300' : ''
         } border border-gray-400 py-2 px-4 hover:bg-sage-100 text-center`}
         disabled={!hasPrevPage}
-        to={`${base}${prevPage > 1 ? `/${prevPage}` : ''}`}
+        to={`${base}/${prevPage > 1 ? prevPage : ''}`}
       >
         &#8592;<span className="hidden md:inline"> Prev</span>
       </Link>
       {/* TODO: Will need to limit the number of pages shown here eventually. Seems to break on mobile when there's 5+ pages */}
       {Array.from({ length: totalPages }).map((_, i) => (
         <Link
-          to={`${base}${i > 0 ? `/${i + 1}` : ''}`}
+          to={`${base}/${i > 0 ? i + 1 : ''}`}
           key={`page-${i}`}
           className={`border border-gray-400 py-2 px-4 text-center ${
             i + 1 === currentPage ? 'bg-sage-100' : ''
