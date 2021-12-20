@@ -87,35 +87,14 @@ const ContactForm = () => {
         </label>
         <label>
           How did you hear about me?
-          <select name="from[]">
+          <select name="from" onChange={updateValues} className="w-full my-2">
             {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
               <option value={source} key={`form-select-${source}`}>
-                {startCase(source)}
+                {source === 'none' ? 'Other' : startCase(source)}
               </option>
             ))}
           </select>
         </label>
-        <fieldset className="grid grid-cols-1 gap-2 mb-4">
-          <legend className="mb-2">
-            How did you hear about me old version?
-          </legend>
-          {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
-            <label
-              key={`form-radio-${source}`}
-              className="flex items-center justify-between border border-gray-400 p-2"
-            >
-              {source === 'none' ? 'Somewhere Else' : startCase(source)}
-              <input
-                type="radio"
-                value=""
-                id={source}
-                onChange={updateValues}
-                name="from-backup-old"
-                defaultChecked={source === 'none'}
-              />
-            </label>
-          ))}
-        </fieldset>
         <button
           type="submit"
           className="block w-full border border-gray-400 bg-sage-400 shadow-md"
