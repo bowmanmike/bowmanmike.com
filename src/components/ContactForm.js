@@ -7,7 +7,7 @@ const encode = data =>
     .join('&');
 
 const ContactForm = () => {
-  const [values, setValues] = useState({ name: '', email: '', referrer: '' });
+  const [values, setValues] = useState({ name: '', email: '', from: '' });
 
   function updateValues(e) {
     let { value } = e.target;
@@ -72,7 +72,7 @@ const ContactForm = () => {
               value=""
               id="none"
               onChange={updateValues}
-              name="referrer"
+              name="from"
               defaultChecked
             />
           </label>
@@ -83,7 +83,7 @@ const ContactForm = () => {
               value="word-of-mouth"
               id="word-of-mouth"
               onChange={updateValues}
-              name="referrer"
+              name="from"
             />
           </label>
           <label>
@@ -93,7 +93,7 @@ const ContactForm = () => {
               value="social-media"
               id="social-media"
               onChange={updateValues}
-              name="referrer"
+              name="from"
             />
           </label>
           <label>
@@ -103,7 +103,7 @@ const ContactForm = () => {
               value="google"
               id="google"
               onChange={updateValues}
-              name="referrer"
+              name="from"
             />
           </label>
         </fieldset>
