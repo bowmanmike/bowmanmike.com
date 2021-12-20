@@ -85,16 +85,20 @@ const ContactForm = () => {
             className="w-full"
           />
         </label>
-        <label htmlFor="from">How did you hear about me?</label>
-        <select id="from" name="from[]">
-          {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
-            <option value={source} key={`form-select-${source}`}>
-              {startCase(source)}
-            </option>
-          ))}
-        </select>
+        <label>
+          How did you hear about me?
+          <select name="from[]">
+            {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
+              <option value={source} key={`form-select-${source}`}>
+                {startCase(source)}
+              </option>
+            ))}
+          </select>
+        </label>
         <fieldset className="grid grid-cols-1 gap-2 mb-4">
-          <legend className="mb-2">How did you hear about me?</legend>
+          <legend className="mb-2">
+            How did you hear about me old version?
+          </legend>
           {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
             <label
               key={`form-radio-${source}`}
@@ -106,7 +110,7 @@ const ContactForm = () => {
                 value=""
                 id={source}
                 onChange={updateValues}
-                name="from-backup"
+                name="from-backup-old"
                 defaultChecked={source === 'none'}
               />
             </label>
