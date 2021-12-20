@@ -62,48 +62,50 @@ const ContactForm = () => {
             required
           />
         </label>
-        <p>How did you hear about me?</p>
-        <label htmlFor="n/a">
-          N/A
-          <input
-            type="radio"
-            value=""
-            id="n/a"
-            onChange={updateValues}
-            name="referrer"
-            defaultChecked
-          />
-        </label>
-        <label htmlFor="word-of-mouth">
-          Word Of Mouth
-          <input
-            type="radio"
-            value="word-of-mouth"
-            id="word-of-mouth"
-            onChange={updateValues}
-            name="referrer"
-          />
-        </label>
-        <label htmlFor="social-media">
-          Social Media (Facebook, Instagram, LinkedIn)
-          <input
-            type="radio"
-            value="social-media"
-            id="social-media"
-            onChange={updateValues}
-            name="referrer"
-          />
-        </label>
-        <label htmlFor="google">
-          Google Search
-          <input
-            type="radio"
-            value="google"
-            id="google"
-            onChange={updateValues}
-            name="referrer"
-          />
-        </label>
+        <fieldset>
+          <legend>How did you hear about me?</legend>
+          <label htmlFor="none">
+            N/A
+            <input
+              type="radio"
+              value=""
+              id="none"
+              onChange={updateValues}
+              name="referrer"
+              defaultChecked
+            />
+          </label>
+          <label htmlFor="word-of-mouth">
+            Word Of Mouth
+            <input
+              type="radio"
+              value="word-of-mouth"
+              id="word-of-mouth"
+              onChange={updateValues}
+              name="referrer"
+            />
+          </label>
+          <label htmlFor="social-media">
+            Social Media (Facebook, Instagram, LinkedIn)
+            <input
+              type="radio"
+              value="social-media"
+              id="social-media"
+              onChange={updateValues}
+              name="referrer"
+            />
+          </label>
+          <label htmlFor="google">
+            Google Search
+            <input
+              type="radio"
+              value="google"
+              id="google"
+              onChange={updateValues}
+              name="referrer"
+            />
+          </label>
+        </fieldset>
         <button type="submit">Submit</button>
       </form>
     </div>
