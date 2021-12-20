@@ -5,6 +5,7 @@ import Seo from '../components/Seo';
 import PastWork from '../components/PastWork';
 import Contact from '../components/Contact';
 import BlogHighlight from '../components/BlogHighlight';
+import ContactForm from '../components/ContactForm';
 
 import RailsLogo from '../assets/images/rails-logo.svg';
 import ReactLogo from '../assets/images/react-icon.svg';
@@ -89,6 +90,7 @@ const IndexPage = () => (
     </div>
     <PastWork />
     <BlogHighlight />
+    <ContactForm />
   </>
 );
 
