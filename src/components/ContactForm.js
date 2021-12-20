@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 
 const encode = data =>
@@ -64,7 +65,7 @@ const ContactForm = () => {
         </label>
         <fieldset>
           <legend>How did you hear about me?</legend>
-          <label htmlFor="none">
+          <label>
             N/A
             <input
               type="radio"
@@ -75,7 +76,7 @@ const ContactForm = () => {
               defaultChecked
             />
           </label>
-          <label htmlFor="word-of-mouth">
+          <label>
             Word Of Mouth
             <input
               type="radio"
@@ -85,7 +86,7 @@ const ContactForm = () => {
               name="referrer"
             />
           </label>
-          <label htmlFor="social-media">
+          <label>
             Social Media (Facebook, Instagram, LinkedIn)
             <input
               type="radio"
@@ -95,7 +96,7 @@ const ContactForm = () => {
               name="referrer"
             />
           </label>
-          <label htmlFor="google">
+          <label>
             Google Search
             <input
               type="radio"
