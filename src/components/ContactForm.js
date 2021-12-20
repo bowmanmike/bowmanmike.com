@@ -62,23 +62,47 @@ const ContactForm = () => {
             required
           />
         </label>
-        <label htmlFor="referrer">
-          How did you hear about me?
-          <select
-            id="referrer"
-            name="referrer"
-            value={values.referrer}
+        <p>How did you hear about me?</p>
+        <label htmlFor="n/a">
+          N/A
+          <input
+            type="radio"
+            value=""
+            id="n/a"
             onChange={updateValues}
-          >
-            <option value="" default>
-              N/A
-            </option>
-            <option value="google">Google Search</option>
-            <option value="social-media">
-              Social Media (Facebook, Twitter, Instagram, LinkedIn)
-            </option>
-            <option value="word-of-mouth">Word Of Mouth</option>
-          </select>
+            name="referrer"
+            defaultChecked
+          />
+        </label>
+        <label htmlFor="word-of-mouth">
+          Word Of Mouth
+          <input
+            type="radio"
+            value="word-of-mouth"
+            id="word-of-mouth"
+            onChange={updateValues}
+            name="referrer"
+          />
+        </label>
+        <label htmlFor="social-media">
+          Social Media (Facebook, Instagram, LinkedIn)
+          <input
+            type="radio"
+            value="social-media"
+            id="social-media"
+            onChange={updateValues}
+            name="referrer"
+          />
+        </label>
+        <label htmlFor="google">
+          Google Search
+          <input
+            type="radio"
+            value="google"
+            id="google"
+            onChange={updateValues}
+            name="referrer"
+          />
         </label>
         <button type="submit">Submit</button>
       </form>
