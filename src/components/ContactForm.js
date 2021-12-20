@@ -59,10 +59,13 @@ const ContactForm = () => {
         {['name', 'email'].map(tag => (
           <label
             htmlFor={tag}
-            className="w-full flex my-2 items-center justify-between"
+            // className="w-full flex my-2 items-center justify-between"
+            className="w-full block"
             key={`form-input-${tag}`}
           >
-            {startCase(tag)}
+            <span className="border-sage border-b-2 pr-2">
+              {startCase(tag)}
+            </span>
             <input
               type="text"
               id={tag}
@@ -70,34 +73,38 @@ const ContactForm = () => {
               value={values[tag]}
               onChange={updateValues}
               required
-              className="ml-2"
+              className="block w-full my-2 outline-none"
               placeholder={`Your ${startCase(tag)}`}
             />
           </label>
         ))}
         <label htmlFor="content">
-          <p>How can I help?</p>
+          <span className="border-sage border-b-2 pr-2">How can I help?</span>
           <textarea
             id="content"
             name="content"
             value={values.content}
             onChange={updateValues}
-            className="w-full"
+            className="w-full my-2"
           />
         </label>
         <label>
-          How did you hear about me?
+          <span className="border-b-2 border-sage pr-2">
+            How did you hear about me?
+          </span>
           <select name="from" onChange={updateValues} className="w-full my-2">
             {['word-of-mouth', 'social-media', 'google', 'none'].map(source => (
               <option value={source} key={`form-select-${source}`}>
-                {source === 'none' ? 'Other' : startCase(source)}
+                {source === 'none'
+                  ? 'Other (Let me know above!)'
+                  : startCase(source)}
               </option>
             ))}
           </select>
         </label>
         <button
           type="submit"
-          className="block w-full border border-gray-400 bg-sage-400 shadow-md"
+          className="block w-full border border-gray-400 bg-sage-400 shadow-md mt-2"
         >
           Submit
         </button>
