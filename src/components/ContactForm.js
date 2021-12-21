@@ -7,6 +7,12 @@ const encode = data =>
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
+const Wrapper = ({ children }) => (
+  <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
+    {children}
+  </div>
+);
+
 const ContactForm = () => {
   const [values, setValues] = useState({
     name: '',
@@ -15,6 +21,7 @@ const ContactForm = () => {
     content: '',
   });
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   function updateValues(e) {
     let { value } = e.target;
@@ -40,6 +47,7 @@ const ContactForm = () => {
       })
         .then(resp => {
           setSubmitting(false);
+          setSubmitted(true);
           console.log({ resp });
         })
         .catch(err => {
@@ -48,12 +56,23 @@ const ContactForm = () => {
         });
     } else {
       setSubmitting(false);
+      setSubmitted(true);
       console.log({ values });
     }
   }
 
+  if (submitted) {
+    return (
+      <Wrapper>
+        <h3 className="text-2xl mb-2 border-sage border-b-4 max-w-max pr-8">
+          Get In Touch!
+        </h3>
+        <p>Thanks! You'll be hearing back shortly!</p>
+      </Wrapper>
+    );
+  }
   return (
-    <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
+    <Wrapper>
       <h3 className="text-2xl mb-2 border-sage border-b-4 max-w-max pr-8">
         Get In Touch!
       </h3>
@@ -127,7 +146,7 @@ const ContactForm = () => {
           {submitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
-    </div>
+    </Wrapper>
   );
 };
 
