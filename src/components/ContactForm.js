@@ -45,10 +45,9 @@ const ContactForm = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...values }),
       })
-        .then(resp => {
+        .then(() => {
           setSubmitting(false);
           setSubmitted(true);
-          console.log({ resp });
         })
         .catch(err => {
           setSubmitting(false);
