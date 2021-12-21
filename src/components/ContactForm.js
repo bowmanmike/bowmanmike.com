@@ -23,6 +23,11 @@ const ContactForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setSubmitted(false), 10_000);
+    return () => clearTimeout(timer);
+  }, [submitted]);
+
   function updateValues(e) {
     let { value } = e.target;
     if (e.target.type === 'number') {
