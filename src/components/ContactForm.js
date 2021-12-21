@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import startCase from 'lodash.startcase';
 
 const encode = data =>
@@ -14,6 +14,7 @@ const ContactForm = () => {
     from: '',
     content: '',
   });
+  const [submitting, setSubmitting] = useState(false);
 
   function updateValues(e) {
     let { value } = e.target;
@@ -27,19 +28,29 @@ const ContactForm = () => {
     });
   }
 
-  const submitForm = e => {
+  function submitForm(e) {
     e.preventDefault();
+    setSubmitting(true);
 
     if (process.env.NODE_ENV === 'production') {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...values }),
-      });
+      })
+        .then(resp => {
+          setSubmitting(false);
+          console.log({ resp });
+        })
+        .catch(err => {
+          setSubmitting(false);
+          console.log({ err });
+        });
     } else {
+      setSubmitting(false);
       console.log({ values });
     }
-  };
+  }
 
   return (
     <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
@@ -108,9 +119,12 @@ const ContactForm = () => {
         </label>
         <button
           type="submit"
-          className="block w-full border border-gray-400 bg-sage-400 shadow-md mt-2 md:col-span-2 md:w-1/4 mx-auto py-2"
+          className={`block w-full border border-gray-400 bg-sage-400 shadow-md mt-2 md:col-span-2 md:w-1/4 mx-auto py-2 ${
+            submitting ? 'pointer-events-none bg-gray-300' : ''
+          }`}
+          disabled={submitting}
         >
-          Submit
+          {submitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
     </div>
