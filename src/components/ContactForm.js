@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import startCase from 'lodash.startcase';
 import { Transition } from '@headlessui/react';
 
@@ -76,21 +76,29 @@ const ContactForm = () => {
         enter="transition-opacity duration-1000"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-150"
+        leave="transition-opacity duration-1000"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <p>Thanks! You'll be hearing back shortly!</p>
-        <button type="button" onClick={() => setSubmitted(false)}>
-          Show me the form again!
-        </button>
+        <div className="text-center">
+          <p className="text-lg my-2">
+            Thanks, you'll be hearing back shortly!
+          </p>
+          <button
+            type="button"
+            className="border border-gray-400 shadow-md py-2 px-6 my-4"
+            onClick={() => setSubmitted(false)}
+          >
+            Show me the form again
+          </button>
+        </div>
       </Transition>
       <Transition
         show={!submitted}
         enter="transition-opacity duration-1000"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-150"
+        leave="transition-opacity duration-1000"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
