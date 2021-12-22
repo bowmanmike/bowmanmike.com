@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import startCase from 'lodash.startcase';
 import { Transition } from '@headlessui/react';
 
+import IndexContainer from './IndexContainer';
+
 const encode = data =>
   Object.keys(data)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -67,10 +69,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="border border-gray-400 p-2 lg:p-4 m-4 lg:m-0 shadow-md">
-      <h3 className="text-2xl mb-2 border-sage border-b-4 max-w-max pr-8">
-        Get In Touch!
-      </h3>
+    <IndexContainer headerText="Get In Touch!">
       <Transition
         show={submitted}
         enter="transition-opacity duration-1000"
@@ -175,7 +174,7 @@ const ContactForm = () => {
           </button>
         </form>
       </Transition>
-    </div>
+    </IndexContainer>
   );
 };
 

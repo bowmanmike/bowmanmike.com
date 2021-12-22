@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { FaEnvelopeOpen } from 'react-icons/fa';
+import IndexContainer from './IndexContainer';
 import LHLLogo from '../assets/images/lighthouse-labs-logo.svg';
 import TheScoreLogo from '../assets/images/thescore-logo.svg';
 import PagerDutyLogo from '../assets/images/pagerduty-logo.svg';
@@ -24,10 +25,7 @@ const LogoCard = ({ href, baseColour, children }) => {
 };
 
 const PastWork = () => (
-  <div className="border border-gray-400 lg:p-4 lg:mx-0 shadow-md m-4 p-2">
-    <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8">
-      Work Experience
-    </h2>
+  <IndexContainer headerText="Work Experience">
     <div className="my-4 w-full">
       <p className="inline-block md:align-bottom w-1/2 md:w-max">
         Currently a Web Development Mentor at
@@ -72,7 +70,7 @@ const PastWork = () => (
         </p>
       </a>
     </div>
-  </div>
+  </IndexContainer>
 );
 
 export default PastWork;
