@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 
-import IndexContainer from './IndexContainer.js';
 import { formatDate } from '../lib/formatDate';
 
 const LATEST_POST_QUERY = graphql`
@@ -72,7 +71,10 @@ const BlogHighlight = () => {
   const [post] = posts.nodes;
 
   return (
-    <IndexContainer headerText="Latest Blog Post">
+    <>
+      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+        Latest Blog Post
+      </h2>
       <div>
         {/* Do we actually want a link here? */}
         {/* Or should I have links to the most recent, say, 3 post? */}
@@ -97,7 +99,7 @@ const BlogHighlight = () => {
           <PostPreview togglePost={togglePost} post={post} />
         )}
       </div>
-    </IndexContainer>
+    </>
   );
 };
 

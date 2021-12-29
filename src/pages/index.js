@@ -36,7 +36,10 @@ const IndexPage = () => (
       />
       <Contact />
     </div>
-    <IndexContainer headerText="Hi! I'm Mike, and I'm here to help">
+    <IndexContainer>
+      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+        Hi! I'm Mike, and I'm here to help
+      </h2>
       <p>
         I'm a software developer based in Toronto, and available to improve your
         business's online presence. Whether you need a custom e-commerce
@@ -57,6 +60,9 @@ const IndexPage = () => (
       </p>
     </IndexContainer>
     <IndexContainer headerText="My Toolbelt">
+      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+        My Toolbelt
+      </h2>
       <p>
         While I'll use whichever tool is best for the job, I have significant
         experience with these particular tools
@@ -80,9 +86,15 @@ const IndexPage = () => (
         </TechCard>
       </div>
     </IndexContainer>
-    <PastWork />
-    <BlogHighlight />
-    <ContactForm />
+    <IndexContainer>
+      <PastWork />
+    </IndexContainer>
+    <IndexContainer>
+      <BlogHighlight />
+    </IndexContainer>
+    <IndexContainer>
+      <ContactForm />
+    </IndexContainer>
   </>
 );
 
