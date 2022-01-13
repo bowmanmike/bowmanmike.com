@@ -26,11 +26,11 @@ const LATEST_POST_QUERY = graphql`
 
 const PostPreview = ({ togglePost, post }) => (
   <div>
-    <p className="prose prose-lg mx-auto">
+    <p className="mx-auto prose prose-lg">
       {post.excerpt}{' '}
       <button
         type="button"
-        className="text-gray-500 ml-4 hover:text-gray-700"
+        className="ml-4 text-gray-500 hover:text-gray-700"
         onClick={togglePost}
       >
         Read more...
@@ -43,7 +43,7 @@ const FullPost = ({ togglePost, post }) => (
   <div>
     <div
       dangerouslySetInnerHTML={{ __html: post.html }}
-      className="prose prose-lg mx-auto"
+      className="mx-auto prose prose-lg"
     />
     <div className="mb-4">
       <button
@@ -55,7 +55,7 @@ const FullPost = ({ togglePost, post }) => (
       </button>
     </div>
     <Link to="blog" className="">
-      <p className="border border-gray-400 shadow-md py-2 px-4 text-center md:w-1/2 md:mx-auto">
+      <p className="py-2 px-4 text-center border border-gray-400 shadow-md md:mx-auto md:w-1/2">
         More Posts!
       </p>
     </Link>
@@ -72,13 +72,13 @@ const BlogHighlight = () => {
 
   return (
     <>
-      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         Latest Blog Post
       </h2>
       <div>
         {/* Do we actually want a link here? */}
         {/* Or should I have links to the most recent, say, 3 post? */}
-        <div className="mb-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col justify-between items-center mb-4 md:flex-row">
           <Link to={`blog/${post.frontmatter.slug}`} className="w-full">
             <h3 className="text-xl">{post.frontmatter.title}</h3>
             <h4 className="text-lg">
@@ -87,7 +87,7 @@ const BlogHighlight = () => {
           </Link>
           <Link
             to="blog"
-            className="border border-gray-400 shadow-md w-full md:w-1/4 py-2 px-4 text-center mt-4 md:mt-0 h-full inline-block"
+            className="inline-block py-2 px-4 mt-4 w-full h-full text-center border border-gray-400 shadow-md md:mt-0 md:w-1/4"
           >
             More Posts!
           </Link>

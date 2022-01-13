@@ -7,14 +7,14 @@ const AboutPage = () => (
   <div>
     <Seo title="About" />
     <div className="relative mx-auto">
-      <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+      <div className="mx-auto max-w-prose text-base lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
-          <h3 className="text-2xl sm:text-2xl mb-4">Who Am I?</h3>
+          <h3 className="mb-4 text-2xl sm:text-2xl">Who Am I?</h3>
         </div>
       </div>
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-        <div className="relative lg:row-start-1 lg:col-start-2">
-          <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
+        <div className="relative lg:col-start-2 lg:row-start-1">
+          <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
             <div>
               <StaticImage
                 src="../assets/images/mike-headshot.png"
@@ -28,13 +28,13 @@ const AboutPage = () => (
           </div>
         </div>
         <div className="mt-8 lg:mt-0">
-          <div className="text-base max-w-prose mx-auto lg:max-w-none">
+          <div className="mx-auto max-w-prose text-base lg:max-w-none">
             <p className="text-lg text-gray-500">
               I'm a software developer based in Toronto. I love writing clean,
               well-tested code, solving complex problems, and cold-brew coffee.
             </p>
           </div>
-          <div className="mt-5 prose mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+          <div className="mx-auto mt-5 lg:col-start-1 lg:row-start-1 lg:max-w-none prose">
             <p>
               Software development brings me a fulfilling career that keeps me
               energized, engaged, and excited. I love the feeling of seeing a

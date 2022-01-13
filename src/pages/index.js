@@ -14,9 +14,9 @@ import GoLogo from '../assets/images/go-logo.svg';
 
 const TechCard = ({ name, href, children }) => (
   <a href={href} className="border border-gray-400 shadow-md hover:underline">
-    <div className="p-4 h-full min-h-full grid justify-center items-center grid-rows-1">
+    <div className="grid grid-rows-1 justify-center items-center p-4 h-full min-h-full">
       {children}
-      <p className="text-center text-lg self-end">{name}</p>
+      <p className="self-end text-lg text-center">{name}</p>
     </div>
   </a>
 );
@@ -24,11 +24,11 @@ const TechCard = ({ name, href, children }) => (
 const IndexPage = () => (
   <>
     <Seo />
-    <div className="grid lg:grid-cols-2 mb-8">
+    <div className="grid mb-8 lg:grid-cols-2">
       <StaticImage
         src="../assets/images/mike-headshot-cropped.png"
         alt="Mike Bowman Headshot"
-        className="max-w-xs sm:max-w-sm rounded-full shadow-lg mx-auto my-8"
+        className="my-8 mx-auto max-w-xs rounded-full shadow-lg sm:max-w-sm"
         imgClassName="rounded-full"
         aspectRatio={1}
         transformOptions={{ cropFocus: 'attention' }}
@@ -37,7 +37,7 @@ const IndexPage = () => (
       <Contact />
     </div>
     <IndexContainer>
-      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         Hi! I'm Mike, and I'm here to help
       </h2>
       <p>
@@ -60,14 +60,14 @@ const IndexPage = () => (
       </p>
     </IndexContainer>
     <IndexContainer headerText="My Toolbelt">
-      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         My Toolbelt
       </h2>
       <p>
         While I'll use whichever tool is best for the job, I have significant
         experience with these particular tools
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+      <div className="grid grid-cols-2 gap-4 mt-2 md:grid-cols-4">
         <TechCard name="Ruby on Rails" href="https://rubyonrails.org">
           <RailsLogo className="w-full" alt="Rails Logo" />
         </TechCard>

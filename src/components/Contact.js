@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelopeOpen } from 'react-icons/fa';
 const ContactMethod = ({ href, text, methodName, children }) => (
   <li className="m-4">
     <a href={href}>
-      <p className="border border-gray-400 shadow-lg p-2 inline-block bg-sage w-full md:w-1/2 text-center">
+      <p className="inline-block p-2 w-full text-center border border-gray-400 shadow-lg md:w-1/2 bg-sage">
         {children}
         {text}
       </p>
@@ -15,7 +15,7 @@ const ContactMethod = ({ href, text, methodName, children }) => (
 
 const Contact = () => (
   <div className="grid items-center">
-    <h3 className="text-3xl text-center self-end border-sage border-b-4 w-1/2 mx-auto pb-2">
+    <h3 className="self-end pb-2 mx-auto w-1/2 text-3xl text-center border-b-4 border-sage">
       Find Me Here!
     </h3>
     <ul className="text-lg text-center">

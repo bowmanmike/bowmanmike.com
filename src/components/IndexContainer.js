@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IndexContainer = ({ children }) => (
-  <div className="border border-gray-400 lg:p-4 lg:mx-0 shadow-md m-4 p-2">
+  <div className="p-2 m-4 border border-gray-400 shadow-md lg:p-4 lg:mx-0">
     {children}
   </div>
 );

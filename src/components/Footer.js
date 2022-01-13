@@ -11,7 +11,7 @@ const LogoLink = ({ href, baseColour, children }) => {
   return (
     <a
       href={href}
-      className="text-gray-50 px-2 rounded-md shadow-md inline-flex items-center justify-center gap-1"
+      className="inline-flex gap-1 justify-center items-center px-2 text-gray-50 rounded-md shadow-md"
       style={styles}
     >
       {children}
@@ -20,7 +20,7 @@ const LogoLink = ({ href, baseColour, children }) => {
 };
 
 const Footer = () => (
-  <footer className="mb-8 mx-auto text-md text-center p-2 lg:p-4 m-4 lg:mx-0">
+  <footer className="p-2 m-4 mx-auto mb-8 text-center lg:p-4 lg:mx-0 text-md">
     <p className="my-2">
       This site was built by hand with{' '}
       <LogoLink href="https://www.gatsbyjs.com" baseColour="#672ab2">

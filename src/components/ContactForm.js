@@ -68,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <h2 className="text-2xl border-sage border-b-4 max-w-max pr-8 mb-4">
+      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         Get In Touch!
       </h2>
       <Transition
@@ -81,12 +81,12 @@ const ContactForm = () => {
         leaveTo="opacity-0"
       >
         <div className="text-center">
-          <p className="text-lg my-2">
+          <p className="my-2 text-lg">
             Thanks, you'll be hearing back shortly!
           </p>
           <button
             type="button"
-            className="border border-gray-400 shadow-md py-2 px-6 my-4"
+            className="py-2 px-6 my-4 border border-gray-400 shadow-md"
             onClick={() => setSubmitted(false)}
           >
             Show me the form again
@@ -108,17 +108,17 @@ const ContactForm = () => {
           netlify-honeypot="cool-stuff"
           data-netlify="true"
           onSubmit={submitForm}
-          className="w-full grid grid-cols-1 md:grid-cols-2 md:gap-2"
+          className="grid grid-cols-1 w-full md:grid-cols-2 md:gap-2"
         >
           <input type="hidden" name="contact" value="contact" />
           <input type="hidden" name="cool-stuff" />
           {['name', 'email'].map(tag => (
             <label
               htmlFor={tag}
-              className="w-full block"
+              className="block w-full"
               key={`form-input-${tag}`}
             >
-              <span className="border-sage border-b-2 pr-2">
+              <span className="pr-2 border-b-2 border-sage">
                 {startCase(tag)}
               </span>
               <input
@@ -128,30 +128,30 @@ const ContactForm = () => {
                 value={values[tag]}
                 onChange={updateValues}
                 required
-                className="block w-full my-2 outline-none shadow-md"
+                className="block my-2 w-full shadow-md outline-none"
                 placeholder={`Your ${startCase(tag)}`}
               />
             </label>
           ))}
           <label htmlFor="content">
-            <span className="border-sage border-b-2 pr-2">How can I help?</span>
+            <span className="pr-2 border-b-2 border-sage">How can I help?</span>
             <textarea
               id="content"
               name="content"
               value={values.content}
               onChange={updateValues}
-              className="w-full my-2 shadow-md"
+              className="my-2 w-full shadow-md"
               placeholder="Let me know what I can do for you!"
             />
           </label>
           <label>
-            <span className="border-b-2 border-sage pr-2">
+            <span className="pr-2 border-b-2 border-sage">
               How did you hear about me?
             </span>
             <select
               name="from"
               onChange={updateValues}
-              className="w-full my-2 shadow-md"
+              className="my-2 w-full shadow-md"
             >
               {['word-of-mouth', 'social-media', 'google', 'none'].map(
                 source => (

@@ -14,7 +14,7 @@ export default function Pagination({
   const hasPrevPage = prevPage >= 1;
 
   return (
-    <div className="grid grid-flow-col md:w-2/3 md:mx-auto shadow-md">
+    <div className="grid grid-flow-col shadow-md md:mx-auto md:w-2/3">
       <Link
         className={`${
           !hasPrevPage ? 'pointer-events-none bg-gray-300' : ''
