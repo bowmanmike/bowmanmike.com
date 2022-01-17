@@ -59,7 +59,13 @@ const IndexPage = () => (
         your team and improve your web presence.
       </p>
     </IndexContainer>
-    <IndexContainer headerText="My Toolbelt">
+    <IndexContainer>
+      <BlogHighlight />
+    </IndexContainer>
+    <IndexContainer>
+      <ContactForm />
+    </IndexContainer>
+    <IndexContainer>
       <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         My Toolbelt
       </h2>
@@ -88,12 +94,6 @@ const IndexPage = () => (
     </IndexContainer>
     <IndexContainer>
       <PastWork />
-    </IndexContainer>
-    <IndexContainer>
-      <BlogHighlight />
-    </IndexContainer>
-    <IndexContainer>
-      <ContactForm />
     </IndexContainer>
   </>
 );

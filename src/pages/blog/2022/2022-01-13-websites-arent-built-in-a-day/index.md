@@ -5,7 +5,7 @@ slug: rome-wasnt-built-in-a-day
 published: true
 ---
 
-So let's talk about blogs. This one, in particular, and it's evolution over the
+So let's talk about blogs. This one, in particular, and its evolution over the
 years. After all, this site wasn't built in a day, and neither was Rome. That's
 the expression, right?<!-- endexcerpt -->
 
