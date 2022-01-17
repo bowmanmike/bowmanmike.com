@@ -1,7 +1,7 @@
 ---
 title: "Websites Aren't Built In A Day"
 date: 2022-01-17
-slug: rome-wasnt-built-in-a-day
+slug: websites-arent-built-in-a-day
 published: true
 ---
 
