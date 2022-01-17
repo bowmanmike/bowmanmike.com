@@ -1,5 +1,5 @@
 ---
-title: "Websites aren't build in a day"
+title: "Websites Aren't Built In A Day"
 date: 2022-01-17
 slug: rome-wasnt-built-in-a-day
 published: true
