@@ -7,7 +7,7 @@ published: true
 
 Are we there yet?  
 
-When I was a kid, my sister and I needed to find ways to entertain ourselves on
+When I was a kid, my siblings and I needed to find ways to entertain ourselves on
 long car rides. We thought it was fun to "secretly plan" to ask my parents, in
 unison, and in that particular sing-song way, "Are we there yet?". Of course, we
 rarely were, and we knew that. And sure enough, the answer was always no. (More
