@@ -66,6 +66,9 @@ const IndexPage = () => (
       <ContactForm />
     </IndexContainer>
     <IndexContainer>
+      <PastWork />
+    </IndexContainer>
+    <IndexContainer>
       <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
         My Toolbelt
       </h2>
@@ -91,9 +94,6 @@ const IndexPage = () => (
           <GoLogo alt="Golang Logo" className="w-full" />
         </TechCard>
       </div>
-    </IndexContainer>
-    <IndexContainer>
-      <PastWork />
     </IndexContainer>
   </>
 );
