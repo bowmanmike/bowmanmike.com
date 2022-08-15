@@ -26,8 +26,8 @@ export const jobs = [
     colour: '#1a1a1c',
     bulletPoints: [
       'Maintained significant legacy Rails codebase to power main API, data ingestion, and push notifications',
-      'Designed and built two new data ingestion services using HTTP polling and socket connections',
-      'Helped design and develop a payments gateway',
+      'Designed and built two new data ingestion services using HTTP polling and socket connections, using Ruby and Elixir',
+      'Helped design and develop a payments gateway using Elixir and Phoenix',
     ],
   },
   {
