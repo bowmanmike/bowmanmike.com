@@ -6,7 +6,7 @@ import { jobs } from '../lib/jobs';
 const LogoCard = ({ href, baseColour, children }) => {
   const styles = { backgroundColor: baseColour };
   return (
-    <a href={href} className="">
+    <a href={href}>
       <div
         className={`flex items-center ${
           baseColour && 'p-2'
