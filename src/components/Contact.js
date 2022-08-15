@@ -4,10 +4,12 @@ import { FaGithub, FaLinkedin, FaEnvelopeOpen } from 'react-icons/fa';
 const ContactMethod = ({ href, text, methodName, children }) => (
   <li className="m-4">
     <a href={href}>
-      <p className="inline-block p-2 w-full text-center border border-gray-400 shadow-lg md:w-1/2 bg-sage">
-        {children}
-        {text}
-      </p>
+      <div className="flex items-center mx-auto text-center p-2 w-full border border-gray-400 shadow-lg md:w-1/2 bg-sage">
+        <p className="mx-auto">
+          {children}
+          {text}
+        </p>
+      </div>
       <p className="sr-only">{methodName}</p>
     </a>
   </li>
