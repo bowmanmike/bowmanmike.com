@@ -22,8 +22,8 @@ const LogoCard = ({ href, baseColour, children }) => {
 const JobSection = ({ job }) => {
   return (
     <>
-      <div className="flex gap-x-4 mb-6">
-        <div className="w-1/4">
+      <div className="flex flex-col md:flex-row gap-x-4 mb-6">
+        <div className="md:w-1/4 flex-shrink-0 mb-2 md:mb-auto">
           <div className="w-1/2 mb-1">
             <LogoCard href={job.href} baseColour={job.colour}>
               {job.logo}
@@ -45,7 +45,6 @@ const JobSection = ({ job }) => {
 };
 
 const PastWork = () => (
-  // TODO: Want to make this section more resume-like
   <>
     <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
       Work Experience
