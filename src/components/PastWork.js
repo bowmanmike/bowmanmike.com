@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import { FaEnvelopeOpen } from 'react-icons/fa';
-import LHLLogo from '../assets/images/lighthouse-labs-logo.svg';
+// import LHLLogo from '../assets/images/lighthouse-labs-logo.svg';
 import TheScoreLogo from '../assets/images/thescore-logo.svg';
 import PagerDutyLogo from '../assets/images/pagerduty-logo.svg';
 
@@ -13,6 +13,11 @@ const jobInfo = [
     href: 'https://pagerduty.com',
     startDate: 'April, 2021',
     endDate: 'October, 2021',
+    bulletPoints: [
+      'Worked to launch a customer notification system in a new service region',
+      'Helped to onboard new team members',
+      'Updated and maintained multiple legacy services in Ruby, Elixir, and Scala',
+    ],
   },
   {
     company: 'theScore',
@@ -21,6 +26,11 @@ const jobInfo = [
     startDate: 'April, 2018',
     endDate: 'March, 2021',
     colour: '#1a1a1c',
+    bulletPoints: [
+      'Maintained significant legacy Rails codebase to power main API, data ingestion, and push notifications',
+      'Designed and built two new data ingestion services using HTTP polling and socket connections',
+      'Helped design and develop a payments gateway',
+    ],
   },
   {
     company: 'Zoocasa',
@@ -35,13 +45,19 @@ const jobInfo = [
     startDate: 'May, 2016',
     endDate: 'March, 2018',
     colour: '#171a1c',
+    bulletPoints: [
+      'Design, build, and maintain tools to process data',
+      'Architect and scale APIs to power front-end features',
+      'Ensure high levels of testing and documentation',
+      'Utilize primarily Go, Ruby, and RethinkDB',
+    ],
   },
 ];
 
 const LogoCard = ({ href, baseColour, children }) => {
   const styles = { backgroundColor: baseColour };
   return (
-    <a href={href} className="p-4 border border-gray-400 shadow-md md:h-full">
+    <a href={href} className="">
       <div
         className="flex items-center p-2 max-w-full h-full rounded-md"
         style={styles}
@@ -54,10 +70,17 @@ const LogoCard = ({ href, baseColour, children }) => {
 
 const JobSection = ({ job }) => {
   return (
-    <div className="max-w-max">
-      <LogoCard href={job.href} baseColour={job.colour}>
-        {job.logo}
-      </LogoCard>
+    <div className="flex justify-between">
+      <div className="w-24">
+        <LogoCard href={job.href} baseColour={job.colour}>
+          {job.logo}
+        </LogoCard>
+      </div>
+      <ul>
+        {job.bulletPoints.map((text, index) => (
+          <li key={index}>{text}</li>
+        ))}
+      </ul>
     </div>
   );
 };
@@ -71,25 +94,7 @@ const PastWork = () => (
     {jobInfo.map(job => {
       return <JobSection job={job} key={job.company} />;
     })}
-    {/* <div className="grid grid-cols-1 gap-4 justify-items-center items-center mb-4 max-w-max text-center md:grid-cols-3 md:text-left"> */}
-    {/*   <h3 className="inline-block col-span-1 justify-self-start md:col-span-3 text-lg"> */}
-    {/*     Previously learned at... */}
-    {/*   </h3>{' '} */}
-    {/*   <LogoCard href="https://pagerduty.com"> */}
-    {/*     <PagerDutyLogo width="100%" className="h-full" /> */}
-    {/*   </LogoCard> */}
-    {/*   <LogoCard href="https://thescore.com" baseColour="#1a1a1c"> */}
-    {/*     <TheScoreLogo width="100%" className="h-full" /> */}
-    {/*   </LogoCard> */}
-    {/*   <LogoCard href="https://zoocasa.com" baseColour="#171a1c"> */}
-    {/*     <StaticImage */}
-    {/*       src="../assets/images/zoocasa-logo.png" */}
-    {/*       alt="Zoocasa Logo" */}
-    {/*       imgClassName="h-full" */}
-    {/*     /> */}
-    {/*   </LogoCard> */}
-    {/* </div> */}
-    <div className="mb-4 border-b-2 border-sage" />
+    <div className="m-4 border-b-2 border-sage" />
     <div className="p-2 mx-auto max-w-max text-xl text-center border border-gray-400 shadow-md md:p-4 md:text-left">
       <p className="inline-block mb-2">Next Adventure: You!</p>
       <a
