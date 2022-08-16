@@ -12,9 +12,9 @@ export const jobs = [
     startDate: 'April, 2021',
     endDate: 'October, 2021',
     bulletPoints: [
-      'Worked to launch a customer notification system in a new service region',
-      'Helped to onboard new team members',
-      'Updated and maintained multiple legacy services in Ruby, Elixir, and Scala',
+      'Worked to launch a customer notification system in a new service region.',
+      'Helped to onboard new team members.',
+      'Updated and maintained multiple legacy services in Ruby, Elixir, and Scala.',
     ],
   },
   {
@@ -25,9 +25,9 @@ export const jobs = [
     endDate: 'March, 2021',
     colour: '#1a1a1c',
     bulletPoints: [
-      'Maintained significant legacy Rails codebase to power main API, data ingestion, and push notifications',
-      'Designed and built two new data ingestion services using HTTP polling and socket connections, using Ruby and Elixir',
-      'Helped design and develop a payments gateway using Elixir and Phoenix',
+      'Maintained significant legacy Rails codebase to power main API, data ingestion, and push notifications.',
+      'Designed and built two new data ingestion services using HTTP polling and socket connections, using Ruby and Elixir.',
+      'Helped design and develop a payments gateway using Elixir and Phoenix.',
     ],
   },
   {
@@ -44,10 +44,10 @@ export const jobs = [
     endDate: 'March, 2018',
     colour: '#171a1c',
     bulletPoints: [
-      'Design, build, and maintain tools to process data',
-      'Architect and scale APIs to power front-end features',
-      'Ensure high levels of testing and documentation',
-      'Utilize primarily Go, Ruby, and RethinkDB',
+      'Design, build, and maintain tools to process data.',
+      'Architect and scale APIs to power front-end features.',
+      'Ensure high levels of testing and documentation.',
+      'Utilize primarily Go, Ruby, and RethinkDB.',
     ],
   },
 ];
