@@ -57,10 +57,10 @@ and for distributing that knowledge throughtout an application.
 At it’s core, my solution involved a class for each flag. Something like this:
 
 ```ruby
-class FeatureFlag
+class NewLayoutFeatureFlag
   class << self
     def value
-      ENV["FLAG_ENABLED"]
+      ENV["NEW_LAYOUT_ENABLED"]
     end
 
     def parse
@@ -88,11 +88,11 @@ this particular case, the flag is stored in an environment variable, but that is
 certainly not a requirement of this method.
 
 For me, the key to this approach is the simplicity of it’s interface. Wherever I
-am in my application, I can call `FeatureFlag.enabled_for_user?` with the user
-ID, and get back whether or not the flag is enabled for that user. The Flag
-itself knows *how* to check whether a particular user should be able to use a
-feature. This interface allows the flag code to be as simple or as complex as it
-needs to be. It could do a DB lookup, it could store the state in Redis, or
+am in my application, I can call `NewLayoutFeatureFlag.enabled_for_user?` with
+the user ID, and get back whether or not the flag is enabled for that user. The
+Flag itself knows *how* to check whether a particular user should be able to use
+a feature. This interface allows the flag code to be as simple or as complex as
+it needs to be. It could do a DB lookup, it could store the state in Redis, or
 perform some work to determine whether or not the flag should be enabled.
 
 Having a simple interface like this allows you to use the flag in some really
@@ -101,16 +101,16 @@ stick it in a `before_action` call, like this.
 
 ```ruby
 class FooController < ApplicationController
-  before_action :check_feature_flag
+  before_action :check_new_layout_feature_flag
 
   ...
 
   private
 
-  def check_feature_flag
-    unless FeatureFlag.enabled_for_user?(@user.id)
+  def check_new_layout_feature_flag
+    unless NewLayoutFeatureFlag.enabled_for_user?(@user.id)
       render json: {errors: "This feature is not enabled for this account"},
-             status: :unprocessable_entity
+               status: :unprocessable_entity
     end
   end
 end
@@ -135,7 +135,7 @@ class FeatureFlagsController < ApplicationController
 
   def flags
     {
-      "foo_enabled" => FeatureFlag,
+      "new_layout_enabled" => NewLayoutFeatureFlag,
       ...
     }
   end
@@ -177,10 +177,10 @@ always open to new connections!
 
 ```ruby
 # flag implementation
-class EnvironmentVariableFeatureFlag
+class NewLayoutFeatureFlag
   class << self
     def value
-      ENV["FLAG_ENABLED"]
+      ENV["NEW_LAYOUT_ENABLED"]
     end
 
     def parse
@@ -215,7 +215,7 @@ class FeatureFlagsController < ApplicationController
 
   def flags
     {
-      "veem_enabled" => Veem::FeatureFlag
+      "new_layout_enabled" => NewLayoutFeatureFlag
     }
   end
 
