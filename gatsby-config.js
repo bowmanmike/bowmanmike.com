@@ -7,6 +7,7 @@ module.exports = {
     author: '@mikebowman_dev',
     siteUrl: 'https://mikebowman.dev',
   },
+  trailingSlash: 'always',
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
