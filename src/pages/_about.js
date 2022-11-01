@@ -7,7 +7,7 @@ const AboutPage = () => (
   <div>
     <Seo title="About" />
     <div className="relative mx-auto">
-      <div className="mx-auto max-w-prose text-base lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+      <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
         <div>
           <h3 className="mb-4 text-2xl sm:text-2xl">Who Am I?</h3>
         </div>
@@ -34,7 +34,7 @@ const AboutPage = () => (
               well-tested code, solving complex problems, and cold-brew coffee.
             </p>
           </div>
-          <div className="mx-auto mt-5 lg:col-start-1 lg:row-start-1 lg:max-w-none prose">
+          <div className="prose mx-auto mt-5 lg:col-start-1 lg:row-start-1 lg:max-w-none">
             <p>
               Software development brings me a fulfilling career that keeps me
               energized, engaged, and excited. I love the feeling of seeing a

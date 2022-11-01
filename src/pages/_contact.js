@@ -8,7 +8,7 @@ const ContactPage = () => (
     <div>
       <div className="lg:grid lg:grid-cols-3 lg:gap-8">
         <h2 className="text-2xl">Get in touch</h2>
-        <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0">
           <div>
             <h3 className="text-lg font-medium leading-6">Email</h3>
             <dl className="mt-2 text-base text-gray-500">

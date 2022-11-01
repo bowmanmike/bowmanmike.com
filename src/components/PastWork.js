@@ -10,7 +10,7 @@ const LogoCard = ({ href, baseColour, children }) => {
       <div
         className={`flex items-center ${
           baseColour && 'p-2'
-        } max-w-full h-full rounded-md`}
+        } h-full max-w-full rounded-md`}
         style={styles}
       >
         {children}
@@ -22,14 +22,14 @@ const LogoCard = ({ href, baseColour, children }) => {
 const JobSection = ({ job }) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-x-4 mb-6">
-        <div className="md:w-1/4 flex-shrink-0 mb-2 md:mb-auto">
-          <div className="w-1/2 mb-1">
+      <div className="mb-6 flex flex-col gap-x-4 md:flex-row">
+        <div className="mb-2 flex-shrink-0 md:mb-auto md:w-1/4">
+          <div className="mb-1 w-1/2">
             <LogoCard href={job.href} baseColour={job.colour}>
               {job.logo}
             </LogoCard>
           </div>
-          <p className="italic text-sm font-thin">
+          <p className="text-sm font-thin italic">
             {job.startDate} - {job.endDate}
           </p>
         </div>
@@ -46,7 +46,7 @@ const JobSection = ({ job }) => {
 
 const PastWork = () => (
   <>
-    <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
+    <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
       Work Experience
     </h2>
     <div className="pt-2">
@@ -54,15 +54,15 @@ const PastWork = () => (
         return <JobSection job={job} key={job.company} />;
       })}
     </div>
-    <div className="p-2 mx-auto max-w-max text-xl text-center border border-gray-400 shadow-md md:p-4 md:text-left">
-      <p className="inline-block mb-2">Next Adventure: You!</p>
+    <div className="mx-auto max-w-max border border-gray-400 p-2 text-center text-xl shadow-md md:p-4 md:text-left">
+      <p className="mb-2 inline-block">Next Adventure: You!</p>
       <a
         href="mailto:mike@mikebowman.dev"
         className="inline-block w-full border border-gray-400 md:ml-4 md:w-max"
       >
         <p className="sr-only">Email Address</p>
-        <p className="py-2 px-4 text-lg text-center bg-sage flex items-center">
-          <FaEnvelopeOpen className="inline-block mr-2" />
+        <p className="flex items-center bg-sage py-2 px-4 text-center text-lg">
+          <FaEnvelopeOpen className="mr-2 inline-block" />
           mike@mikebowman.dev
         </p>
       </a>

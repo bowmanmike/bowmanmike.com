@@ -6,7 +6,7 @@ import Pagination from '../components/Pagination';
 const homeSvg = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="mr-2 w-5 h-5"
+    className="mr-2 h-5 w-5"
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -17,18 +17,18 @@ const homeSvg = (
 const Blog = ({ data, pageContext }) => {
   const { posts } = data.blog;
   return (
-    <div className="p-2 m-4 border border-gray-400 shadow-md lg:p-4 lg:m-0">
-      <h2 className="pr-8 mb-4 max-w-max text-2xl text-center border-b-4 border-sage">
+    <div className="m-4 border border-gray-400 p-2 shadow-md lg:m-0 lg:p-4">
+      <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-center text-2xl">
         All Posts
       </h2>
       <Link
         to="/"
-        className="block py-2 px-4 mb-4 w-full border border-gray-400 shadow-md md:mx-auto md:w-2/3 hover:bg-sage-100"
+        className="mb-4 block w-full border border-gray-400 py-2 px-4 shadow-md hover:bg-sage-100 md:mx-auto md:w-2/3"
       >
-        <p className="flex justify-center items-center">
+        <p className="flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mr-2 w-5 h-5"
+            className="mr-2 h-5 w-5"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -50,8 +50,8 @@ const Blog = ({ data, pageContext }) => {
         return (
           <Link key={slug} to={`/blog/${slug}`}>
             <div className="p-2 lg:p-4">
-              <div className="pr-8 max-w-max border-b-2 border-sage">
-                <p className="text-lg italic font-medium">
+              <div className="max-w-max border-b-2 border-sage pr-8">
+                <p className="text-lg font-medium italic">
                   {post.frontmatter.title}
                 </p>
                 <p className="italic">Published {post.frontmatter.date}</p>

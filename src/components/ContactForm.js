@@ -68,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
+      <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
         Get In Touch!
       </h2>
       <Transition
@@ -86,7 +86,7 @@ const ContactForm = () => {
           </p>
           <button
             type="button"
-            className="py-2 px-6 my-4 border border-gray-400 shadow-md"
+            className="my-4 border border-gray-400 py-2 px-6 shadow-md"
             onClick={() => setSubmitted(false)}
           >
             Show me the form again
@@ -108,7 +108,7 @@ const ContactForm = () => {
           netlify-honeypot="cool-stuff"
           data-netlify="true"
           onSubmit={submitForm}
-          className="grid grid-cols-1 w-full md:grid-cols-2 md:gap-2"
+          className="grid w-full grid-cols-1 md:grid-cols-2 md:gap-2"
         >
           <input type="hidden" name="contact" value="contact" />
           <input type="hidden" name="cool-stuff" />
@@ -118,7 +118,7 @@ const ContactForm = () => {
               className="block w-full"
               key={`form-input-${tag}`}
             >
-              <span className="pr-2 border-b-2 border-sage">
+              <span className="border-b-2 border-sage pr-2">
                 {startCase(tag)}
               </span>
               <input
@@ -128,13 +128,13 @@ const ContactForm = () => {
                 value={values[tag]}
                 onChange={updateValues}
                 required
-                className="block my-2 w-full shadow-md outline-none"
+                className="my-2 block w-full shadow-md outline-none"
                 placeholder={`Your ${startCase(tag)}`}
               />
             </label>
           ))}
           <label htmlFor="content">
-            <span className="pr-2 border-b-2 border-sage">How can I help?</span>
+            <span className="border-b-2 border-sage pr-2">How can I help?</span>
             <textarea
               id="content"
               name="content"
@@ -145,7 +145,7 @@ const ContactForm = () => {
             />
           </label>
           <label>
-            <span className="pr-2 border-b-2 border-sage">
+            <span className="border-b-2 border-sage pr-2">
               How did you hear about me?
             </span>
             <select
@@ -166,7 +166,7 @@ const ContactForm = () => {
           </label>
           <button
             type="submit"
-            className={`block w-full border border-gray-400 bg-sage-400 shadow-md mt-2 md:col-span-2 md:w-1/4 mx-auto py-2 ${
+            className={`mx-auto mt-2 block w-full border border-gray-400 bg-sage-400 py-2 shadow-md md:col-span-2 md:w-1/4 ${
               submitting ? 'pointer-events-none bg-gray-300' : ''
             }`}
             disabled={submitting}

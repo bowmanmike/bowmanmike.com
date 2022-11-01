@@ -14,9 +14,9 @@ import GoLogo from '../assets/images/go-logo.svg';
 
 const TechCard = ({ name, href, children }) => (
   <a href={href} className="border border-gray-400 shadow-md hover:underline">
-    <div className="grid grid-rows-1 justify-center items-center p-4 h-full min-h-full">
+    <div className="grid h-full min-h-full grid-rows-1 items-center justify-center p-4">
       {children}
-      <p className="self-end text-lg text-center">{name}</p>
+      <p className="self-end text-center text-lg">{name}</p>
     </div>
   </a>
 );
@@ -24,7 +24,7 @@ const TechCard = ({ name, href, children }) => (
 const IndexPage = () => (
   <>
     <Seo />
-    <div className="grid mb-8 lg:grid-cols-2">
+    <div className="mb-8 grid lg:grid-cols-2">
       <StaticImage
         src="../assets/images/mike-headshot-cropped.png"
         alt="Mike Bowman Headshot"
@@ -37,7 +37,7 @@ const IndexPage = () => (
       <Contact />
     </div>
     <IndexContainer>
-      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
+      <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
         Hi! I'm Mike, and I'm here to help
       </h2>
       <p>
@@ -69,14 +69,14 @@ const IndexPage = () => (
       <PastWork />
     </IndexContainer>
     <IndexContainer>
-      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
+      <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
         My Toolbelt
       </h2>
       <p>
         While I'll use whichever tool is best for the job, I have significant
         experience with these particular tools
       </p>
-      <div className="grid grid-cols-2 gap-4 mt-2 md:grid-cols-4">
+      <div className="mt-2 grid grid-cols-2 gap-4 md:grid-cols-4">
         <TechCard name="Ruby on Rails" href="https://rubyonrails.org">
           <RailsLogo className="w-full" alt="Rails Logo" />
         </TechCard>

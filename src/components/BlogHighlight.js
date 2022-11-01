@@ -26,7 +26,7 @@ const LATEST_POST_QUERY = graphql`
 
 const PostPreview = ({ togglePost, post }) => (
   <div>
-    <p className="mx-auto prose prose-lg">
+    <p className="prose prose-lg mx-auto">
       {post.excerpt}{' '}
       <button
         type="button"
@@ -43,7 +43,7 @@ const FullPost = ({ togglePost, post }) => (
   <div>
     <div
       dangerouslySetInnerHTML={{ __html: post.html }}
-      className="mx-auto prose prose-lg"
+      className="prose prose-lg mx-auto"
     />
     <div className="mb-4">
       <button
@@ -55,7 +55,7 @@ const FullPost = ({ togglePost, post }) => (
       </button>
     </div>
     <Link to="blog" className="">
-      <p className="py-2 px-4 text-center border border-gray-400 shadow-md md:mx-auto md:w-1/2">
+      <p className="border border-gray-400 py-2 px-4 text-center shadow-md md:mx-auto md:w-1/2">
         More Posts!
       </p>
     </Link>
@@ -72,13 +72,13 @@ const BlogHighlight = () => {
 
   return (
     <>
-      <h2 className="pr-8 mb-4 max-w-max text-2xl border-b-4 border-sage">
+      <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
         Latest Blog Post
       </h2>
       <div>
         {/* Do we actually want a link here? */}
         {/* Or should I have links to the most recent, say, 3 post? */}
-        <div className="flex flex-col justify-between items-center mb-4 md:flex-row">
+        <div className="mb-4 flex flex-col items-center justify-between md:flex-row">
           <Link to={`blog/${post.frontmatter.slug}`} className="w-full">
             <h3 className="text-xl">{post.frontmatter.title}</h3>
             <h4 className="text-lg">
@@ -87,7 +87,7 @@ const BlogHighlight = () => {
           </Link>
           <Link
             to="blog"
-            className="inline-block py-2 px-4 mt-4 w-full h-full text-center border border-gray-400 shadow-md md:mt-0 md:w-1/4"
+            className="mt-4 inline-block h-full w-full border border-gray-400 py-2 px-4 text-center shadow-md md:mt-0 md:w-1/4"
           >
             More Posts!
           </Link>

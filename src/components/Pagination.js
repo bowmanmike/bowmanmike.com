@@ -18,7 +18,7 @@ export default function Pagination({
       <Link
         className={`${
           !hasPrevPage ? 'pointer-events-none bg-gray-300' : ''
-        } border border-gray-400 py-2 px-4 hover:bg-sage-100 text-center`}
+        } border border-gray-400 py-2 px-4 text-center hover:bg-sage-100`}
         disabled={!hasPrevPage}
         to={`${base}${prevPage > 1 ? `/${prevPage}` : ''}`}
       >
@@ -39,7 +39,7 @@ export default function Pagination({
       <Link
         className={`${
           !hasNextPage ? 'pointer-events-none bg-gray-300' : ''
-        } border border-gray-400 px-4 py-2 hover:bg-sage-100 text-center`}
+        } border border-gray-400 px-4 py-2 text-center hover:bg-sage-100`}
         disabled={!hasNextPage}
         to={`${base}/${nextPage}`}
       >
