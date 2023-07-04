@@ -25,9 +25,17 @@ const JobSection = ({ job }) => {
       <div className="mb-6 flex flex-col gap-x-4 md:flex-row">
         <div className="mb-2 flex-shrink-0 md:mb-auto md:w-1/4">
           <div className="mb-1 w-1/2">
-            <LogoCard href={job.href} baseColour={job.colour}>
-              {job.logo}
-            </LogoCard>
+            {job.logo ? (
+              <LogoCard href={job.href} baseColour={job.colour}>
+                {job.logo}
+              </LogoCard>
+            ) : (
+              <div>
+                <a href={job.href}>
+                  <p>{job.company}</p>
+                </a>
+              </div>
+            )}
           </div>
           <p className="text-sm font-thin italic">
             {job.startDate} - {job.endDate}

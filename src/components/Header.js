@@ -7,7 +7,7 @@ const Header = () => (
       <Link to="/">
         <p className="mb-2 text-3xl font-semibold">Mike Bowman</p>
         <p className="max-w-max border-b-4 border-sage pr-8 font-mono text-xl italic">
-          Freelance Software Developer
+          Software Developer
         </p>
       </Link>
     </div>

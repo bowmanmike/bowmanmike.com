@@ -3,8 +3,29 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import TheScoreLogo from '../assets/images/thescore-logo.svg';
 import PagerDutyLogo from '../assets/images/pagerduty-logo.svg';
+import RBCLogo from '../assets/images/rbc-logo.svg';
 
 export const jobs = [
+  {
+    company: 'RBC',
+    logo: <RBCLogo width="100%" className="h-full" />,
+    href: 'https://rbc.com',
+    startDate: 'January, 2023',
+    endDate: 'Today',
+    bulletPoints: [
+      'Developed and maintained payment engines and related services using Scala and Java.',
+      'Developed an internal tool using Angular to allow other teams to easily make manual adjustments to database records.',
+    ],
+  },
+  {
+    company: 'Mike Bowman Development',
+    href: 'https://mikebowman.dev',
+    startDate: 'January, 2022',
+    endDate: 'January, 2023',
+    bulletPoints: [
+      'Freelance full-stack web development, primarily using Ruby on Rails & React',
+    ],
+  },
   {
     company: 'Pager Duty',
     logo: <PagerDutyLogo width="100%" className="h-full" />,

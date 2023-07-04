@@ -38,25 +38,23 @@ const IndexPage = () => (
     </div>
     <IndexContainer>
       <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-2xl">
-        Hi! I'm Mike, and I'm here to help
+        Hi! I'm Mike
       </h2>
       <p>
-        I'm a software developer based in Toronto, and available to improve your
-        business's online presence. Whether you need a custom e-commerce
-        solution, a back-end framework migration, or a slick new front-end, I
-        can help.
+        I'm a software developer based in Toronto, currently working at{' '}
+        <a href="https://rbc.com">RBC</a>.
       </p>
       <p>
         I have {new Date().getFullYear() - 2016}+ years of experience as a
         Full-Stack Developer. I've worked with a wide variety of modern web
         technologies, as seen below. I have worked in companies of all sizes,
         from a tiny real-estate startup, to a mid-size media company, all the
-        way to a large Silicon Valley B2B company.
+        way to a large Silicon Valley B2B company, and a globally-significant
+        Canadian bank.
       </p>
       <p>
         I am passionate about clean code, testing, new technology, and cold brew
-        coffee. I am available on a freelance or contract basis to work with
-        your team and improve your web presence.
+        coffee.
       </p>
     </IndexContainer>
     <IndexContainer>
