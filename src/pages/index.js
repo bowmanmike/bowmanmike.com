@@ -61,9 +61,6 @@ const IndexPage = () => (
       <BlogHighlight />
     </IndexContainer>
     <IndexContainer>
-      <ContactForm />
-    </IndexContainer>
-    <IndexContainer>
       <PastWork />
     </IndexContainer>
     <IndexContainer>
