@@ -13,15 +13,6 @@ import './src/styles/global.css';
 
 require('prismjs/themes/prism-tomorrow.css');
 
-export const onRouteUpdate = () => {
-  if (
-    process.env.NODE_ENV === `production` &&
-    typeof window.plausible === `object`
-  ) {
-    window.plausible(`pageview`);
-  }
-};
-
 export function wrapPageElement({ element, props }) {
   return <Layout {...props}>{element}</Layout>;
 }

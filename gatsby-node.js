@@ -58,25 +58,6 @@ async function createPosts({ graphql, actions: { createPage } }) {
   });
 }
 
-const redirects = [
-  {
-    fromPath: '/js/script.js',
-    toPath: 'https://plausible.io/js/plausible.js',
-    statusCode: 200,
-  },
-  {
-    fromPath: '/api/event',
-    toPath: 'https://plausible.io/api/event',
-    statusCode: 202,
-  },
-];
-
 exports.createPages = async params => {
-  const { createRedirect } = params.actions;
-
   await Promise.all([createPosts(params)]);
-
-  for (const redirect of redirects) {
-    createRedirect(redirect);
-  }
 };
