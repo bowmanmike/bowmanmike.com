@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Pagination from '../components/Pagination';
+import Seo from '../components/Seo';
 
 const homeSvg = (
   <svg
@@ -18,6 +19,7 @@ const Blog = ({ data, pageContext }) => {
   const { posts } = data.blog;
   return (
     <div className="m-4 border border-gray-400 p-2 shadow-md lg:m-0 lg:p-4">
+      <Seo title="Blog Posts" />
       <h2 className="mb-4 max-w-max border-b-4 border-sage pr-8 text-center text-2xl">
         All Posts
       </h2>

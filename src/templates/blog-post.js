@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Seo from '../components/Seo';
 
 import { formatDate } from '../lib/formatDate';
 
@@ -92,6 +93,7 @@ const NavButton = ({ href, content, preIcon, postIcon }) => (
 
 const BlogPost = ({ data: { post }, pageContext: { prevPost, nextPost } }) => (
   <div className="m-4 border border-gray-400 p-2 shadow-md lg:m-0 lg:p-4">
+    <Seo title={post.frontmatter.title} />
     <article>
       <header className="my-4 py-2 text-center">
         <h2 className="mx-auto mb-2 border-b-4 border-sage px-6 text-xl lg:w-max lg:text-2xl">

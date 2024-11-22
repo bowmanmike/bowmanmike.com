@@ -26,7 +26,7 @@ async function createPosts({ graphql, actions: { createPage } }) {
 
   posts.forEach(({ node }, i) => {
     const {
-      frontmatter: { slug },
+      frontmatter: { slug, title },
     } = node;
     const nextPost = posts[i - 1]?.node?.frontmatter;
     const prevPost = posts[i + 1]?.node?.frontmatter;
@@ -38,6 +38,7 @@ async function createPosts({ graphql, actions: { createPage } }) {
         slug,
         prevPost,
         nextPost,
+        title,
       },
     });
   });
