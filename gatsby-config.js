@@ -2,7 +2,7 @@ require('dotenv').config({ path: '.env' });
 
 module.exports = {
   siteMetadata: {
-    title: 'Mike Bowman',
+    title: 'Mike Bowman | Full Stack Developer',
     description: 'Mike Bowman',
     author: '@mikebowman_dev',
     siteUrl: 'https://mikebowman.dev',
