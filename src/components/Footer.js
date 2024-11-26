@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  SiGatsby,
-  SiTailwindcss,
-  SiNetlify,
-  SiPlausibleanalytics,
-} from 'react-icons/si';
+import { SiGatsby, SiTailwindcss, SiNetlify } from 'react-icons/si';
 
 const LogoLink = ({ href, baseColour, children }) => {
   const styles = { backgroundColor: baseColour };
@@ -28,17 +23,11 @@ const Footer = () => (
       </LogoLink>{' '}
       and{' '}
       <LogoLink href="https://www.tailwindcss.com" baseColour="#52b3d1">
-        <SiTailwindcss /> TailwindCSS
-      </LogoLink>
-    </p>
-    <p className="my-2">
-      Hosted on{' '}
+        <SiTailwindcss /> TailwindCSS,
+      </LogoLink>{' '}
+      and hosted on{' '}
       <LogoLink href="https://www.netlify.com" baseColour="#4caa9f">
         <SiNetlify /> Netlify
-      </LogoLink>{' '}
-      with privacy-friendly analytics provided by{' '}
-      <LogoLink href="https://plausible.io" baseColour="#453ddb">
-        <SiPlausibleanalytics /> Plausible.io
       </LogoLink>
     </p>
     <p className="mt-8 mb-4">
