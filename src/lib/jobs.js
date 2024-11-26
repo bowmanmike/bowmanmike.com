@@ -4,14 +4,25 @@ import { StaticImage } from 'gatsby-plugin-image';
 import TheScoreLogo from '../assets/images/thescore-logo.svg';
 import PagerDutyLogo from '../assets/images/pagerduty-logo.svg';
 import RBCLogo from '../assets/images/rbc-logo.svg';
+import TestDoubleLogo from '../assets/images/testdouble-logo.svg';
 
 export const jobs = [
+  {
+    company: 'Test Double',
+    logo: <TestDoubleLogo />,
+    href: 'https://testdouble.com',
+    startDate: 'October, 2024',
+    endDate: 'Today',
+    bulletPoints: [
+      'Working as a consultant to help clients improve their software development practices.',
+    ],
+  },
   {
     company: 'RBC',
     logo: <RBCLogo width="100%" className="h-full" />,
     href: 'https://rbc.com',
     startDate: 'January, 2023',
-    endDate: 'Today',
+    endDate: 'October, 2024',
     bulletPoints: [
       'Developed and maintained payment engines and related services using Scala and Java.',
       'Developed an internal tool using Angular to allow other teams to easily make manual adjustments to database records.',
